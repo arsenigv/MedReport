@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cf97203a-9a72-46cd-abc4-49acc14f43e9">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="367"/>
+	<queryString>
+		<![CDATA[select * from examination join patient_info on patient_info.id = examination.patient_id]]>
+	</queryString>
+	<field name="id" class="java.lang.Object"/>
+	<field name="patient_id" class="java.lang.Object"/>
+	<field name="exam_date" class="java.lang.Object"/>
+	<field name="ref_doc_surname" class="java.lang.Object"/>
+	<field name="ref_doc_position" class="java.lang.Object"/>
+	<field name="disease_onset" class="java.lang.Object"/>
+	<field name="admission_date" class="java.lang.Object"/>
+	<field name="discharge_date" class="java.lang.Object"/>
+	<field name="history" class="java.lang.Object"/>
+	<field name="side_effect" class="java.lang.Object"/>
+	<field name="days" class="java.lang.Object"/>
+	<field name="emergency" class="java.lang.Object"/>
+	<field name="termination" class="java.lang.Object"/>
+	<field name="result" class="java.lang.Object"/>
+	<field name="ref_diagnosis_code" class="java.lang.Object"/>
+	<field name="ref_diagnosis_info" class="java.lang.Object"/>
+	<field name="admis_diagnosis_code" class="java.lang.Object"/>
+	<field name="admis_diagnosis_info" class="java.lang.Object"/>
+	<field name="provis_diagnosis_code" class="java.lang.Object"/>
+	<field name="provis_diagnosis_info" class="java.lang.Object"/>
+	<field name="main_diagnosis_code" class="java.lang.Object"/>
+	<field name="main_diagnosis_info" class="java.lang.Object"/>
+	<field name="compl_diagnosis_code" class="java.lang.Object"/>
+	<field name="compl_diagnosis_info" class="java.lang.Object"/>
+	<field name="comorbidity_code" class="java.lang.Object"/>
+	<field name="comorbidity_info" class="java.lang.Object"/>
+	<field name="complaints" class="java.lang.Object"/>
+	<field name="anamnesis_of_disease" class="java.lang.Object"/>
+	<field name="anamnesis_of_life" class="java.lang.Object"/>
+	<field name="heredity" class="java.lang.Object"/>
+	<field name="habits" class="java.lang.Object"/>
+	<field name="height" class="java.lang.Object"/>
+	<field name="weight" class="java.lang.Object"/>
+	<field name="imt" class="java.lang.Object"/>
+	<field name="fiz_raz" class="java.lang.Object"/>
+	<field name="def_raz" class="java.lang.Object"/>
+	<field name="telo" class="java.lang.Object"/>
+	<field name="pitanie" class="java.lang.Object"/>
+	<field name="pokrovy" class="java.lang.Object"/>
+	<field name="limf_syst" class="java.lang.Object"/>
+	<field name="mish_syst" class="java.lang.Object"/>
+	<field name="svyaz_sust" class="java.lang.Object"/>
+	<field name="serd_sosud" class="java.lang.Object"/>
+	<field name="leg_dih" class="java.lang.Object"/>
+	<field name="pischevarenie" class="java.lang.Object"/>
+	<field name="mochepolovaya_syst" class="java.lang.Object"/>
+	<field name="nerv_syst" class="java.lang.Object"/>
+	<field name="organi_chuvstv" class="java.lang.Object"/>
+	<field name="sekrecia" class="java.lang.Object"/>
+	<field name="proc_type1" class="java.lang.Object"/>
+	<field name="proc_amount1" class="java.lang.Object"/>
+	<field name="proc1" class="java.lang.Object"/>
+	<field name="proc_type2" class="java.lang.Object"/>
+	<field name="proc_amount2" class="java.lang.Object"/>
+	<field name="proc2" class="java.lang.Object"/>
+	<field name="proc_type3" class="java.lang.Object"/>
+	<field name="proc_amount3" class="java.lang.Object"/>
+	<field name="proc3" class="java.lang.Object"/>
+	<field name="proc_type4" class="java.lang.Object"/>
+	<field name="proc_amount4" class="java.lang.Object"/>
+	<field name="proc4" class="java.lang.Object"/>
+	<field name="proc_type5" class="java.lang.Object"/>
+	<field name="proc_amount5" class="java.lang.Object"/>
+	<field name="proc5" class="java.lang.Object"/>
+	<field name="name" class="java.lang.Object"/>
+	<field name="surname" class="java.lang.Object"/>
+	<field name="patronymic" class="java.lang.Object"/>
+	<field name="gender" class="java.lang.Object"/>
+	<field name="birth" class="java.lang.Object"/>
+	<field name="med_book" class="java.lang.Object"/>
+	<field name="military_rank" class="java.lang.Object"/>
+	<field name="contingent" class="java.lang.Object"/>
+	<field name="service" class="java.lang.Object"/>
+	<field name="address_live" class="java.lang.Object"/>
+	<field name="phone_number" class="java.lang.Object"/>
+	<field name="address_work" class="java.lang.Object"/>
+	<field name="confidant" class="java.lang.Object"/>
+	<field name="policy" class="java.lang.Object"/>
+	<field name="past_illness" class="java.lang.Object"/>
+	<field name="allergic_anamnesis" class="java.lang.Object"/>
+	<title>
+		<band height="555" splitType="Stretch">
+			<line>
+				<reportElement x="401" y="0" width="1" height="555" uuid="ab47bf8f-384a-4aba-8f29-7751bc0e3c4b"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="379" height="20" uuid="875b4bfd-261f-41f9-b631-2551f2b2c79c"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Согласие пациента на обработку персональных данных]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="10" y="20" width="369" height="14" uuid="9bb6a3d9-a040-4e03-bc30-88fd16e4c64a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Я, "+ $F{surname} + " " +$F{name} + " " +$F{patronymic}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="34" width="379" height="30" isRemoveLineWhenBlank="true" uuid="d1576246-4a5f-4637-b0ad-e6e49ecf1282"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["проживающий по адресу: "+ $F{address_live}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="1" y="64" width="378" height="28" uuid="851c8136-faa9-4b03-a56b-bc93bcabd22a"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[паспорт_______________________________________________________,______________________________________________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="102" width="377" height="182" uuid="7d534b0c-53e8-43a4-96f4-19bc18ce675f"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[&#09В соответствии с требованиями статьи 9 Федерального закона от 27 июля 2006 № 152-ФЗ "О персональных данных" в целях оказания мне медицинских услуг потверждаю свое согласие на обработку <b>Федеральному Государственному Бюджетному Учреждению "12 консультативно-диагностический центр" Министерства обороны Российской Федерации (далее Оператор) </b>моих персональных данных, а именно: фамилия, имя, отчество, пол, дата рождения, адрес места жительства, телефон, место работы, данные паспорта (или иного документа удостоверяющего личность), данные полиса ОМС (или ДМС), страховой номер индивидуального лицевого счета (СНИЛС), сведения о состоняии моего здоровья, заболеваниях, случаях обращения за медицинской помощью, сведения о диагностических мероприятиях, назначенном и проведённом лечении, данных рекомендациях.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="284" width="378" height="209" uuid="f737d2e7-8dea-45a8-8b8e-f3d3b921bc62"/>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[	В соответствии с требованиями статьи 10 Федерального закона от 27 июля 2006 г. "О персональных данных" №152-ФЗ даю свое согласие на обработку моих персональных данных Оператором при условии, что их обрабтка осуществляется лицом, профессионально занимающимся медицинской деятельностью и обязанным сохранять врачебную тайну.
+	Оператор имеет право:
+	При обработке моих перональных даных вносить их в реестры, базы данных автоматизированных информационных систем для формирования отчётных форм и иных сведений, предоставление которых регламентировано договорами или иными документами, определяющими взаимодействие Оператора со страховыми медицинскими организациями, медицинскими организациями, органами управления здравоохранения, иными организациями;]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="107" y="76" width="156" height="9" uuid="4cdca1e0-3a80-42bc-ac0d-4e370cb927a8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[(серия и номер) (дата, название выдавшего органа)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="423" y="0" width="379" height="28" uuid="14e0b278-5565-4403-8e4b-011a894e9b0d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ИНФОРМИРОВАННОЕ ДОБРОВОЛЬНОЕ СОГЛАСИЕ НА МЕДИЦИНСКОЕ ВМЕШАТЕЛЬСТВО]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="423" y="28" width="379" height="12" uuid="97cf2d07-f544-4a89-953b-1762edd7d148"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Я, "+ $F{surname} + " " +$F{name} + " " +$F{patronymic}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="423" y="40" width="379" height="24" isRemoveLineWhenBlank="true" uuid="86fa9b46-3d96-451e-a534-89f177b59195"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+ $F{birth} + " г. рождения, зарегистрированный по адресу: " + $F{address_live}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="423" y="64" width="379" height="12" isRemoveLineWhenBlank="true" uuid="15d44c78-aa10-4f54-b3a0-f4d89be6550c"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["проживающий по адресу: ___________________________________________________"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="423" y="80" width="379" height="12" isRemoveLineWhenBlank="true" uuid="a8650f94-2dd1-4a09-b812-1477edb52eda"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["в отношении_______________________________________________________________"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="543" y="74" width="184" height="9" uuid="3e7e4b93-d46d-4c46-9459-73a2b93e937d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[(указывается в случае проживания не по месту регистрации)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="422" y="102" width="265" height="9" uuid="d21cdee5-f0ad-49ac-8a97-e600adc9da92"/>
+				<textElement>
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[(дата рождения пациента при подписании законным представителем)]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="423" y="92" width="379" height="12" isRemoveLineWhenBlank="true" uuid="c82c6056-92ed-4300-bf40-4f83f7b63d52"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["_______________г. рождения, проживающего по адресу:_________________________"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="422" y="107" width="379" height="12" isRemoveLineWhenBlank="true" uuid="7eacaf88-1bd1-4517-be5e-fcc445839edd"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["__________________________________________________________________________"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="494" y="117" width="217" height="9" uuid="0e2aca8f-9688-4e67-ba08-9b06997f763f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[(в случае проживания не по месту жительства законного представителя)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="423" y="126" width="379" height="161" uuid="e91f6854-0ea7-4ade-8b90-e06cbf7c2e64"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[&#09даю информированное согласие на виды медицинских вмешательств, включенные в <i>Перечень определенных видов медицинских вмешательств, на которые граждане дают информированное добровольное согласие при выборе врача и медицинской организации для получения первичной медико-санитарной помощи</i>,  утвержденный приказом Министерства здравоохранения и социального развития Российской Федерации от 23 апреля 2012 г. №290н "Об утверждении Перечня определенных видов медицинских вмешательств, на которые граждане дают информированное добровольное согласие при выборе врача и медицинской организации для получения первичной медико-санитарной помощи" (далее - виды медицинских вмешательств, включенных в Перечень), для получения первичной медико-санитарной помощи/получения первичной медико-санитарной помощи лицом, законным представителем которого я являюсь (ненужное зачеркнуть), в <b>Федеральном Государственном Бюджетном Учреждении "12 консультативно-диагностический центр" Министерства обороны Российской Федерации</b>]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="423" y="287" width="379" height="14" isRemoveLineWhenBlank="true" uuid="3d1b3777-d94f-4388-8530-15a035f1c86d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Медицинским работником: врач-терапевт Гвоздик Н.С."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="422" y="301" width="379" height="161" uuid="ae5132e8-e9c8-4e25-b277-69e476295868"/>
+				<textElement textAlignment="Justified" markup="none">
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<text><![CDATA[	в доступной для меня форме мне разъяснены цели, методы оказания медицинской помощи, связанный с ними риск, возможные варианты медицинских вмешательств, их последствия, в томчисле вероятность развития осложнений, а также предполагаемые результаты оказания медицинской помощи. Мне разъяснено, что я имею право отказаться от одного или нескольких вариантов видов медицинской вмешательств, включенных в Перечень, или потребовать его (их) прекращения, за исключением случаев, предусмотренных частью 9 статьи 20 Федерального закона от 21 ноября 2011 г. № 323-ФЗ "Об основах охраны здоровья граждан в Российской Федерации".
+	Сведения о выбранном (выбранных) мною лице (лицах), которому (которых) в соответствии с пунктом 5 части 5 статьи 19 Федерального закона от 21 ноября 2011 г. № 323-ФЗ "Об основах охраны здоровья граждан в Российской Федерации" может быть передана информация о состоянии моего здоровья или состоянии лица, законным представителем которого я являюсь (ненужное зачеркнуть), в том числе после смерти:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="422" y="463" width="379" height="30" uuid="bb731166-1d63-4606-bdca-787976536b25"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+ $F{surname} + " " +$F{name} + " " +$F{patronymic} +"   контактный телефон: " + $F{phone_number}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="423" y="493" width="379" height="13" uuid="4bfc136b-f8d8-43ff-8bd7-4f2a88d32027"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["_________________  ________________________________________________________"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="450" y="503" width="30" height="9" uuid="9b3be200-4de3-4320-bb6f-f46ccd2302f6"/>
+				<textElement>
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[(подпись)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="530" y="503" width="168" height="9" uuid="43f7fa7a-4617-4573-b2e4-a76457387a68"/>
+				<textElement>
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[(Ф.И.О. гражданина или его законного представителя)]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="423" y="511" width="379" height="13" uuid="f4ef8d1d-5668-41e3-8917-5535cb468d4d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA["_________________  ________________________________________________________"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="450" y="521" width="30" height="9" uuid="752d99d1-75e7-40a9-b968-b0d558bf7f6b"/>
+				<textElement>
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[(подпись)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="530" y="521" width="103" height="9" uuid="5dafcea9-b598-46fa-9f06-676958747d4e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="7"/>
+				</textElement>
+				<text><![CDATA[(Ф.И.О. медицинского работника)]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="422" y="530" width="379" height="15" uuid="cd165b62-ff93-40c3-941a-d7080457bdc9"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Дата оформления: " +$F{admission_date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="533" y="511" width="58" height="12" uuid="6fa93748-9336-4a95-bb21-eee79502dc74"/>
+				<textElement>
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Гвоздик Н.С.]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

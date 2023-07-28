@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="f74da855-260d-4a1b-b650-0f3461984ffb">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="style1"/>
+	<queryString>
+		<![CDATA[select * from examination join patient_info on patient_info.id = examination.patient_id where examination.id = 48]]>
+	</queryString>
+	<field name="id" class="java.lang.Object"/>
+	<field name="patient_id" class="java.lang.Object"/>
+	<field name="exam_date" class="java.lang.Object"/>
+	<field name="ref_doc_surname" class="java.lang.Object"/>
+	<field name="ref_doc_position" class="java.lang.Object"/>
+	<field name="disease_onset" class="java.lang.Object"/>
+	<field name="admission_date" class="java.lang.Object"/>
+	<field name="discharge_date" class="java.lang.Object"/>
+	<field name="history" class="java.lang.Object"/>
+	<field name="side_effect" class="java.lang.Object"/>
+	<field name="days" class="java.lang.Object"/>
+	<field name="time" class="java.lang.Object"/>
+	<field name="emergency" class="java.lang.Object"/>
+	<field name="termination" class="java.lang.Object"/>
+	<field name="result" class="java.lang.Object"/>
+	<field name="ref_diagnosis_code" class="java.lang.Object"/>
+	<field name="ref_diagnosis_info" class="java.lang.Object"/>
+	<field name="admis_diagnosis_code" class="java.lang.Object"/>
+	<field name="admis_diagnosis_info" class="java.lang.Object"/>
+	<field name="provis_diagnosis_code" class="java.lang.Object"/>
+	<field name="provis_diagnosis_info" class="java.lang.Object"/>
+	<field name="main_diagnosis_code" class="java.lang.Object"/>
+	<field name="main_diagnosis_info" class="java.lang.Object"/>
+	<field name="compl_diagnosis_code" class="java.lang.Object"/>
+	<field name="compl_diagnosis_info" class="java.lang.Object"/>
+	<field name="comorbidity_code" class="java.lang.Object"/>
+	<field name="comorbidity_info" class="java.lang.Object"/>
+	<field name="complaints" class="java.lang.Object"/>
+	<field name="anamnesis_of_disease" class="java.lang.Object"/>
+	<field name="anamnesis_of_life" class="java.lang.Object"/>
+	<field name="heredity" class="java.lang.Object"/>
+	<field name="habits" class="java.lang.Object"/>
+	<field name="height" class="java.lang.Object"/>
+	<field name="weight" class="java.lang.Object"/>
+	<field name="imt" class="java.lang.Object"/>
+	<field name="fiz_raz" class="java.lang.Object"/>
+	<field name="def_raz" class="java.lang.Object"/>
+	<field name="telo" class="java.lang.Object"/>
+	<field name="pitanie" class="java.lang.Object"/>
+	<field name="pokrovy" class="java.lang.Object"/>
+	<field name="limf_syst" class="java.lang.Object"/>
+	<field name="mish_syst" class="java.lang.Object"/>
+	<field name="svyaz_sust" class="java.lang.Object"/>
+	<field name="serd_sosud" class="java.lang.Object"/>
+	<field name="leg_dih" class="java.lang.Object"/>
+	<field name="pischevarenie" class="java.lang.Object"/>
+	<field name="mochepolovaya_syst" class="java.lang.Object"/>
+	<field name="nerv_syst" class="java.lang.Object"/>
+	<field name="organi_chuvstv" class="java.lang.Object"/>
+	<field name="sekrecia" class="java.lang.Object"/>
+	<field name="examination_results" class="java.lang.Object"/>
+	<field name="proc_type1" class="java.lang.Object"/>
+	<field name="proc_amount1" class="java.lang.Object"/>
+	<field name="proc1" class="java.lang.Object"/>
+	<field name="proc_type2" class="java.lang.Object"/>
+	<field name="proc_amount2" class="java.lang.Object"/>
+	<field name="proc2" class="java.lang.Object"/>
+	<field name="proc_type3" class="java.lang.Object"/>
+	<field name="proc_amount3" class="java.lang.Object"/>
+	<field name="proc3" class="java.lang.Object"/>
+	<field name="proc_type4" class="java.lang.Object"/>
+	<field name="proc_amount4" class="java.lang.Object"/>
+	<field name="proc4" class="java.lang.Object"/>
+	<field name="proc_type5" class="java.lang.Object"/>
+	<field name="proc_amount5" class="java.lang.Object"/>
+	<field name="proc5" class="java.lang.Object"/>
+	<field name="name" class="java.lang.Object"/>
+	<field name="surname" class="java.lang.Object"/>
+	<field name="patronymic" class="java.lang.Object"/>
+	<field name="gender" class="java.lang.Object"/>
+	<field name="birth" class="java.lang.Object"/>
+	<field name="med_book" class="java.lang.Object"/>
+	<field name="military_rank" class="java.lang.Object"/>
+	<field name="contingent" class="java.lang.Object"/>
+	<field name="service" class="java.lang.Object"/>
+	<field name="address_live" class="java.lang.Object"/>
+	<field name="phone_number" class="java.lang.Object"/>
+	<field name="address_work" class="java.lang.Object"/>
+	<field name="confidant" class="java.lang.Object"/>
+	<field name="policy" class="java.lang.Object"/>
+	<field name="past_illness" class="java.lang.Object"/>
+	<field name="allergic_anamnesis" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="802" splitType="Prevent">
+			<staticText>
+				<reportElement x="451" y="-12" width="104" height="12" uuid="c460352b-86d4-4861-af78-abf4dea89cb8"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="9"/>
+				</textElement>
+				<text><![CDATA[Форма № 003/у (форма 12)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="99" y="0" width="362" height="35" uuid="f61d9ac4-019e-4fdf-af97-c1442ece2ffa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[
+ПРОТОКОЛ ПЕРВИЧНОГО ОСМОТРА ЛЕЧАЩИМ ВРАЧОМ
+(дежурным хирургом, дежурным терапевтом)
+]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="99" y="45" width="362" height="13" uuid="8e87ee24-1849-4626-bf5b-d5a02727c6aa"/>
+				<textElement textAlignment="Center" markup="html">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>Осмотрен лечащим врачом в " +$F{time} + "  " +$F{exam_date}+" г.</b>"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="0" y="99" width="555" height="122" isRemoveLineWhenBlank="true" uuid="97734e07-cf62-4f5e-a80c-c635f451c81a"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["" +$F{complaints}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="0" y="235" width="555" height="173" isRemoveLineWhenBlank="true" uuid="f6eb93fc-95c6-4f43-9b8c-27f874adf91e"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{anamnesis_of_disease}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="0" y="422" width="555" height="98" isRemoveLineWhenBlank="true" uuid="e85d0302-321e-46eb-93db-323fb757a552"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{anamnesis_of_life}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="0" y="534" width="555" height="28" isRemoveLineWhenBlank="true" uuid="ace9c945-478d-4826-b2f6-9d14eb66768a"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{allergic_anamnesis}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="0" y="576" width="555" height="56" isRemoveLineWhenBlank="true" uuid="fd24dd04-2398-4db4-8435-fa4dcb0065ec"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{past_illness}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="0" y="646" width="555" height="28" isRemoveLineWhenBlank="true" uuid="5f2fdda6-e522-4145-806a-51355725b268"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{heredity}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" x="0" y="688" width="555" height="14" uuid="4db60c01-7672-433e-8363-fe636594f034"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{habits}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="85" width="555" height="14" uuid="a5a15b30-db9c-4a13-ba3b-25064af35024"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Жалобы:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="221" width="555" height="14" uuid="977892a7-9a36-4634-b4fb-0c67ef480934"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Анамнез настоящего заболевания:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="408" width="555" height="14" uuid="536662e3-502f-426b-bc1c-1d15965aa502"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Анамнез жизни больного: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="520" width="555" height="14" uuid="242ba664-47a7-421b-8ea2-f5ca0448eff3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Аллергологический анамнез: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="562" width="555" height="14" uuid="340948dd-71fc-454b-aaed-d3bd1b3416f2"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Перенесенные заболевания, ранения, контузия, операции (какие, когда): ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="632" width="555" height="14" uuid="8566c9d2-fc1c-4b1e-93db-d75f483dd1e2"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Наследственность:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="0" y="674" width="555" height="14" uuid="76557511-e084-4d01-9cea-260bd19eba56"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Привычки (курение, алкоголь и т.п.): ]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+</jasperReport>

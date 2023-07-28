@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="44fba8a1-6bc6-4966-9798-bb64f7b772d1">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="861"/>
+	<style name="style1" fontName="Times New Roman" fontSize="10"/>
+	<queryString>
+		<![CDATA[select * from examination join patient_info on patient_info.id = examination.patient_id where examination.id =48]]>
+	</queryString>
+	<field name="id" class="java.lang.Object"/>
+	<field name="patient_id" class="java.lang.Object"/>
+	<field name="exam_date" class="java.lang.Object"/>
+	<field name="ref_doc_surname" class="java.lang.Object"/>
+	<field name="ref_doc_position" class="java.lang.Object"/>
+	<field name="disease_onset" class="java.lang.Object"/>
+	<field name="admission_date" class="java.lang.Object"/>
+	<field name="discharge_date" class="java.lang.Object"/>
+	<field name="history" class="java.lang.Object"/>
+	<field name="side_effect" class="java.lang.Object"/>
+	<field name="days" class="java.lang.Object"/>
+	<field name="time" class="java.lang.Object"/>
+	<field name="emergency" class="java.lang.Object"/>
+	<field name="termination" class="java.lang.Object"/>
+	<field name="result" class="java.lang.Object"/>
+	<field name="ref_diagnosis_code" class="java.lang.Object"/>
+	<field name="ref_diagnosis_info" class="java.lang.Object"/>
+	<field name="admis_diagnosis_code" class="java.lang.Object"/>
+	<field name="admis_diagnosis_info" class="java.lang.Object"/>
+	<field name="provis_diagnosis_code" class="java.lang.Object"/>
+	<field name="provis_diagnosis_info" class="java.lang.Object"/>
+	<field name="main_diagnosis_code" class="java.lang.Object"/>
+	<field name="main_diagnosis_info" class="java.lang.Object"/>
+	<field name="compl_diagnosis_code" class="java.lang.Object"/>
+	<field name="compl_diagnosis_info" class="java.lang.Object"/>
+	<field name="comorbidity_code" class="java.lang.Object"/>
+	<field name="comorbidity_info" class="java.lang.Object"/>
+	<field name="complaints" class="java.lang.Object"/>
+	<field name="anamnesis_of_disease" class="java.lang.Object"/>
+	<field name="anamnesis_of_life" class="java.lang.Object"/>
+	<field name="heredity" class="java.lang.Object"/>
+	<field name="habits" class="java.lang.Object"/>
+	<field name="height" class="java.lang.Object"/>
+	<field name="weight" class="java.lang.Object"/>
+	<field name="imt" class="java.lang.Object"/>
+	<field name="fiz_raz" class="java.lang.Object"/>
+	<field name="def_raz" class="java.lang.Object"/>
+	<field name="telo" class="java.lang.Object"/>
+	<field name="pitanie" class="java.lang.Object"/>
+	<field name="pokrovy" class="java.lang.Object"/>
+	<field name="limf_syst" class="java.lang.Object"/>
+	<field name="mish_syst" class="java.lang.Object"/>
+	<field name="svyaz_sust" class="java.lang.Object"/>
+	<field name="serd_sosud" class="java.lang.Object"/>
+	<field name="leg_dih" class="java.lang.Object"/>
+	<field name="pischevarenie" class="java.lang.Object"/>
+	<field name="mochepolovaya_syst" class="java.lang.Object"/>
+	<field name="nerv_syst" class="java.lang.Object"/>
+	<field name="organi_chuvstv" class="java.lang.Object"/>
+	<field name="sekrecia" class="java.lang.Object"/>
+	<field name="examination_results" class="java.lang.Object"/>
+	<field name="proc_type1" class="java.lang.Object"/>
+	<field name="proc_amount1" class="java.lang.Object"/>
+	<field name="proc1" class="java.lang.Object"/>
+	<field name="proc_type2" class="java.lang.Object"/>
+	<field name="proc_amount2" class="java.lang.Object"/>
+	<field name="proc2" class="java.lang.Object"/>
+	<field name="proc_type3" class="java.lang.Object"/>
+	<field name="proc_amount3" class="java.lang.Object"/>
+	<field name="proc3" class="java.lang.Object"/>
+	<field name="proc_type4" class="java.lang.Object"/>
+	<field name="proc_amount4" class="java.lang.Object"/>
+	<field name="proc4" class="java.lang.Object"/>
+	<field name="proc_type5" class="java.lang.Object"/>
+	<field name="proc_amount5" class="java.lang.Object"/>
+	<field name="proc5" class="java.lang.Object"/>
+	<field name="name" class="java.lang.Object"/>
+	<field name="surname" class="java.lang.Object"/>
+	<field name="patronymic" class="java.lang.Object"/>
+	<field name="gender" class="java.lang.Object"/>
+	<field name="birth" class="java.lang.Object"/>
+	<field name="med_book" class="java.lang.Object"/>
+	<field name="military_rank" class="java.lang.Object"/>
+	<field name="contingent" class="java.lang.Object"/>
+	<field name="service" class="java.lang.Object"/>
+	<field name="address_live" class="java.lang.Object"/>
+	<field name="phone_number" class="java.lang.Object"/>
+	<field name="address_work" class="java.lang.Object"/>
+	<field name="confidant" class="java.lang.Object"/>
+	<field name="policy" class="java.lang.Object"/>
+	<field name="past_illness" class="java.lang.Object"/>
+	<field name="allergic_anamnesis" class="java.lang.Object"/>
+	<title>
+		<band height="802" splitType="Prevent">
+			<rectangle>
+				<reportElement x="265" y="0" width="290" height="264" uuid="ab2264c9-cd95-420d-94e9-6ae778e06765"/>
+				<graphicElement>
+					<pen lineWidth="0.5"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement style="style1" x="224" y="644" width="331" height="12" uuid="03d98284-5b71-4abf-9401-75644c804fe1"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Дата                                 Подпись                                         Код [                   ]]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="224" y="692" width="331" height="12" uuid="2b41ab45-d036-4eb0-b965-3b371c8aee8c"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Дата                                 Подпись                                         Код [                   ]]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="224" y="590" width="331" height="12" uuid="cf2dfb28-0f4d-4512-88ee-9eb80f262a5b"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Дата                                 Подпись                                         Код [                   ]]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="224" y="536" width="331" height="12" uuid="9dfe4fb3-b8c1-4e38-96a1-17d57b7219bf"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Дата                                 Подпись                                         Код [                   ]]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="255" height="30" uuid="7bc58470-b4b2-4795-9983-5a14867839b0"/>
+				<textElement markup="html">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[МЕДИЦИНСКАЯ КАРТА СТАЦИОНАРНОГО БОЛЬНОГО № _________ По архиву № _____________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="463" y="-10" width="92" height="10" uuid="5833df92-ba7f-4ab4-8ffb-16332c1846db"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[Форма № 003/у (форма 12)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="0" y="30" width="255" height="12" uuid="548244e4-f667-443a-ba53-386f18811d87"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[1. Наименование леч. организации:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="0" y="42" width="255" height="12" uuid="866416d4-fc5e-4212-ae72-8abf7c3f50e2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[ФГБУ "12 КДЦ" Минобороны России]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="54" width="255" height="28" uuid="84515ffd-8fe6-4627-bbfc-54c6c41b8f56"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>2. Фамилия, имя, отчество: </b>"  + $F{surname} + " " +$F{name} + " " +$F{patronymic}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="82" width="255" height="14" uuid="e3650a9a-dd94-4b85-82a9-df953a1793ac"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>3. Дата рожд.: </b>" + $F{birth} + "<b> 4. Пол:</b> " + $F{gender}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="style1" x="0" y="96" width="255" height="28" uuid="c555d0a2-49b8-454a-b1dc-415d72018194"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[5. Удостоверение личности, военный билет (паспорт) 
+серия ________ № _______________________________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="0" y="124" width="255" height="14" uuid="2fc43f84-ff70-4992-b934-e12891dbd2cd"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[6. Дата поступления на военную службу "__"________ г.]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="138" width="255" height="14" uuid="b816fb20-0760-4a39-9d90-1a07e3f62018"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>7. Воинское звание: </b>" +($F{military_rank}==null ? "" :$F{military_rank}) +" - "+ ($F{contingent}==null ? "" :$F{contingent})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="false">
+				<reportElement style="style1" x="0" y="152" width="255" height="14" uuid="5eec0dd2-a98d-433b-9197-a3f2a72418a3"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>8. Дата и время поступления: </b>" + ($F{admission_date}==null ? "" : $F{admission_date})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="166" width="255" height="14" uuid="e468d7bb-6dd0-4b33-a4a8-5c1031a7662a"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>9. Кем направлен больной: </b>" + ($F{ref_doc_position}==null ? "нет" : $F{ref_doc_position} + " " + ($F{ref_doc_surname}== null? "" : $F{ref_doc_surname}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="180" width="255" height="14" uuid="406ce7b1-f915-423b-9e83-b1608bccb617"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>10. Доставлен по экстренным показаниям: </b>" + ($F{emergency}.equals("false") ? "Нет" : "Да")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="194" width="255" height="28" uuid="f166b92a-d28f-4d5d-8de2-b2cf87de7934"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>11. Начало заболевания, получения травмы:</b> дата, время " + ($F{disease_onset}==null ? "" : $F{disease_onset})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="222" width="255" height="28" uuid="0bc463cf-3ae9-4e5b-bd5c-d2896355ea58"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>12. Назв. страховой комп., организации: </b>" + "№ " + ($F{med_book}==null ? "" : $F{med_book})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="250" width="255" height="14" uuid="c5624822-746f-4203-a789-8f87d63c31a0"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>13. № страхового полиса, договора: </b>" + ($F{policy}==null ? "" : $F{policy})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="264" width="255" height="14" uuid="7c5ec5eb-3e68-4271-9755-4befeeeaa12f"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>14. Вид оплаты: </b>" + ($F{service}==null ? "" : $F{service})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="style1" x="267" y="0" width="288" height="12" uuid="a6262d0a-a7cf-4c8d-84a0-62e1b3e7b404"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Группа крови_________ Резус-принадлежность________]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="267" y="12" width="288" height="12" uuid="fb05c241-7170-4c7b-abb7-dc79a7c5ef67"/>
+				<textElement markup="html"/>
+				<textFieldExpression><![CDATA["<b>Дата и время поступения </b>" + $F{admission_date} +" <b>Подпись врача</b>"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="style1" x="267" y="48" width="288" height="36" uuid="e555213e-38fc-4509-b27c-eabc1f24fa21"/>
+				<textElement markup="html">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[<b>Наличие документов:</b> медкнижка, направление, продаттестат, выписка из истории болезни, листок нетрудоспособности, страховой полис]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="267" y="84" width="288" height="12" uuid="a4fdc71f-74fe-4ca4-82c4-0c109a3e58ed"/>
+				<textElement textAlignment="Left" markup="html"/>
+				<textFieldExpression><![CDATA["<b>Помещен в </b>" +$F{time}+"  " +$F{admission_date}+" в госпитальное отделение"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="style1" x="267" y="108" width="288" height="12" uuid="9cbc0e5b-4034-4005-b2c7-34b11c0af6dc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Переведен в _________________ отд. __________ ____________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="267" y="120" width="288" height="12" uuid="bd96b9be-5b9b-442d-9e11-cfc561f9a515"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Переведен в _________________ отд. __________ ____________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="267" y="132" width="288" height="12" uuid="cf0a6a94-363c-4a6b-accd-839cf96e7dfa"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Переведен в _________________ отд. __________ ____________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="267" y="144" width="288" height="12" uuid="cea2f497-66b6-4360-8acd-775c53fbded0"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Переведен в _________________ отд. __________ ____________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="267" y="96" width="288" height="12" uuid="d0fa40bf-c74b-46ee-9925-a2afd1ea19ef"/>
+				<textElement textAlignment="Left">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[                                                                       дата         дней лечения]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="267" y="156" width="288" height="36" uuid="c8eb4fbf-dc9e-4038-a70b-b836af88b261"/>
+				<textElement markup="html">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[<b>27. Переведен в:</b> гарнизонный госпиталь, базовый госпиаль, окружной госпиталь, центр. военно-лечебную организацию, организацию гражданского здравоохранения, прочие.]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="267" y="192" width="288" height="12" uuid="7a8d8a24-1728-47f0-b2e6-f2457596d153"/>
+				<textElement textAlignment="Left" markup="html"/>
+				<textFieldExpression><![CDATA["<b>28. Дата убытия <b> " + ($F{discharge_date}==null ? "" : $F{discharge_date})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="style1" x="267" y="216" width="288" height="48" uuid="46fb1f3f-e977-4095-806b-d3809a4e4e46"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[<b>30. Исход заболевания (подчеркнуть)</b> выписан с выздоровлением, с улучшением, без перемен, с ухудшением, умер; переведён в лечебную организацию (какую)
+________________________________________________________________________________]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="278" width="555" height="28" uuid="c26015fa-aa76-479a-940e-bec16f118374"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>15. Место постоянного проживания, тел.: </b>" + ($F{address_live}==null ? "" : $F{address_live} + " тел. ")  + ($F{phone_number}==null ? "" : $F{phone_number})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="306" width="555" height="28" uuid="3ebb07f3-c2bb-4b62-adb9-a1e70e04e0cb"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>16. Фамилия и адрес доверенного лица, тел.: </b>" + ($F{confidant}== null ? "нет" : ($F{confidant}.equals("") ? "нет" : $F{confidant} + " тел. " + $F{phone_number}))]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="334" width="555" height="28" uuid="a9eb0369-b94b-47f8-b095-fbd77f2d0170"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>17. Место службы (работы), должность, тел.: </b>" + ($F{address_work}== null ? "" : $F{address_work})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="style1" x="0" y="362" width="555" height="36" uuid="344f81b3-001d-445f-a3bd-4f10ad501260"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[<b>18. Категория состава: </b> военнослужащий МО РФ (призыв, контракт); офицер (прапорщик) запаса (в отставке); член семьи офицера кадра, офицера запаса (в отставке); военнослужащий ФОИВ (Росгвардии, МЧС, ФСБ, военнослужащий другого ФОИВ), член семьи военнослужащего ФОИВ; военный судья, член семьи военного судьи; гражданский персонал ВС РФ; прочие в т.ч. за плату.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="0" y="398" width="555" height="36" uuid="cd51b9c0-a5b8-4464-87a7-87a77adff06a"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[<b>19. Льготная категория: </b> участник ВОВ, участник боевых действий, подвергался радиационному воздействию, ветеран подразделения особого риска, Герой РФ, Герой СССР, полный кавалер орденов Славы, член семьи Героя РФ, Героя СССР, полного кавалера орденов Славы, инвалидность ________]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="0" y="434" width="555" height="12" uuid="a807a531-2a9f-497f-bee0-076a27fb7a63"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[<b>20. Госпитализация: </b> первичная, повторная]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="446" width="555" height="42" uuid="701a1022-55ce-433d-9a5f-994984b4e73e"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>21. Диагноз направившей организации </b>" + ($F{ref_diagnosis_info}==null ? "" : $F{ref_diagnosis_info})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="245" y="536" width="86" height="12" isRemoveLineWhenBlank="true" uuid="41dec439-4cdf-460a-8f5a-94712d38da1d"/>
+				<textElement textAlignment="Center" markup="none"/>
+				<textFieldExpression><![CDATA["" + $F{admission_date}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="500" width="506" height="36" uuid="5da0117e-d373-4ff7-afe2-926531632389"/>
+				<textElement markup="html"/>
+				<textFieldExpression><![CDATA["<b>22. Диагноз при поступлении: </b>" + ($F{admis_diagnosis_info}==null ? "" : $F{admis_diagnosis_info})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="548" width="506" height="42" uuid="2e994b11-f594-4a34-957f-88a9d4a278af"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>23. Диагноз предварительный: </b>" + ($F{provis_diagnosis_info}==null ? "" : $F{provis_diagnosis_info})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="602" width="506" height="42" uuid="05fe7089-a8fb-4bb5-b192-1bd39582af0b"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<b>24. Диагноз заключительный клинический. </b> Основной: " + ($F{main_diagnosis_info}==null ? "" : $F{main_diagnosis_info})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="656" width="506" height="36" uuid="aa337070-3264-43ec-9766-f78e80892a4a"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Осложнение основного: " +($F{compl_diagnosis_info}==null ? "" : $F{compl_diagnosis_info})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="506" y="536" width="42" height="54" isRemoveLineWhenBlank="true" uuid="30574c6b-d8e7-4ff0-8e5d-96bb5452afbc">
+					<printWhenExpression><![CDATA[!$F{admis_diagnosis_code}.equals("")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" markup="none"/>
+				<textFieldExpression><![CDATA["" + $F{admis_diagnosis_code}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="style1" x="477" y="488" width="78" height="12" uuid="35f9c83c-c981-460d-ae71-c09d3c57baeb"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Код [                   ]]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="506" y="488" width="42" height="48" isRemoveLineWhenBlank="true" uuid="ca70b274-9bd3-44e1-8561-04ead88d2dc6">
+					<printWhenExpression><![CDATA[!$F{ref_diagnosis_code}.equals("")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" markup="none"/>
+				<textFieldExpression><![CDATA["" + $F{ref_diagnosis_code}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="245" y="590" width="86" height="12" isRemoveLineWhenBlank="true" uuid="e5994c0d-4a71-4023-96dd-9556d4b31266"/>
+				<textElement textAlignment="Center" markup="none"/>
+				<textFieldExpression><![CDATA["" + $F{admission_date}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="506" y="590" width="42" height="54" isRemoveLineWhenBlank="true" uuid="0f6c2bd8-1714-4bde-bb0d-d39eac390ef3">
+					<printWhenExpression><![CDATA[!$F{provis_diagnosis_code}.equals("")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" markup="none"/>
+				<textFieldExpression><![CDATA["" + $F{provis_diagnosis_code}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="506" y="644" width="42" height="48" isRemoveLineWhenBlank="true" uuid="5889e186-8541-4d7f-812a-a032874cfedd">
+					<printWhenExpression><![CDATA[!$F{main_diagnosis_code}.equals("")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" markup="none"/>
+				<textFieldExpression><![CDATA["" + $F{main_diagnosis_code}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="506" y="692" width="42" height="54" isRemoveLineWhenBlank="true" uuid="fc2592dd-5052-4398-939c-73c0d06ec16c">
+					<printWhenExpression><![CDATA[!$F{compl_diagnosis_code}.equals("")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" markup="none"/>
+				<textFieldExpression><![CDATA["" + $F{compl_diagnosis_code}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="0" y="704" width="506" height="42" uuid="ee6a1305-a5d5-4b45-833c-254dd9fdf620"/>
+				<textElement markup="html">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Сопутствующий: " + ($F{comorbidity_info}==null ? "" : $F{comorbidity_info})]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="style1" x="224" y="746" width="331" height="12" uuid="021b9e38-85d1-4354-b09d-e870c27aaace"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Дата                                 Подпись                                         Код [                   ]]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="506" y="746" width="42" height="50" isRemoveLineWhenBlank="true" uuid="c89bd353-7bf4-481b-b739-9d3706c57905">
+					<printWhenExpression><![CDATA[!$F{comorbidity_code}.equals("")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" markup="none"/>
+				<textFieldExpression><![CDATA["" + $F{comorbidity_code}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement style="style1" x="0" y="758" width="555" height="12" uuid="0ecc009e-7c65-4e49-96cb-d5d9d363bdc0"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[<b>25: Код ВМП: _________________</b>]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="style1" x="0" y="770" width="555" height="12" uuid="e7d74575-4db0-46cc-8927-cddbb70b643b"/>
+				<textElement textAlignment="Justified" markup="html">
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[<b>26: Код лечащего врача: _________________</b>]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="74" y="10" width="100" height="14" uuid="6ac9ad82-9b5a-49d4-8107-e0ee42ae5767"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{history}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="267" y="204" width="288" height="12" uuid="219b1a5f-4ee0-4047-b107-e6b2f5209fb6"/>
+				<textElement textAlignment="Left" markup="html"/>
+				<textFieldExpression><![CDATA["<b>29. Длительность лечения (в днях)</b> " + ($F{days}==null ? "" : $F{days})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="267" y="24" width="288" height="12" uuid="8fd88a89-3283-4ea4-a25e-b2920c43ada7"/>
+				<textElement markup="html"/>
+				<textFieldExpression><![CDATA["<b>Побочное действие лекарств: </b>" + ($F{side_effect}==null ? "" : $F{side_effect})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="245" y="644" width="86" height="12" isRemoveLineWhenBlank="true" uuid="1426311d-4071-4bc9-b5f1-4ebc839e4a88"/>
+				<textElement textAlignment="Center" markup="none"/>
+				<textFieldExpression><![CDATA["" + $F{discharge_date}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement style="style1" x="245" y="746" width="86" height="12" isRemoveLineWhenBlank="true" uuid="d1b1b767-6962-41d9-9198-0468263bce28"/>
+				<textElement textAlignment="Center" markup="none"/>
+				<textFieldExpression><![CDATA["" + $F{discharge_date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

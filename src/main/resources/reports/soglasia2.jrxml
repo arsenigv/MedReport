@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cf97203a-9a72-46cd-abc4-49acc14f43e9">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from examination join patient_info on patient_info.id = examination.patient_id]]>
+	</queryString>
+	<field name="id" class="java.lang.Object"/>
+	<field name="patient_id" class="java.lang.Object"/>
+	<field name="exam_date" class="java.lang.Object"/>
+	<field name="ref_doc_surname" class="java.lang.Object"/>
+	<field name="ref_doc_position" class="java.lang.Object"/>
+	<field name="disease_onset" class="java.lang.Object"/>
+	<field name="admission_date" class="java.lang.Object"/>
+	<field name="discharge_date" class="java.lang.Object"/>
+	<field name="history" class="java.lang.Object"/>
+	<field name="side_effect" class="java.lang.Object"/>
+	<field name="days" class="java.lang.Object"/>
+	<field name="emergency" class="java.lang.Object"/>
+	<field name="termination" class="java.lang.Object"/>
+	<field name="result" class="java.lang.Object"/>
+	<field name="ref_diagnosis_code" class="java.lang.Object"/>
+	<field name="ref_diagnosis_info" class="java.lang.Object"/>
+	<field name="admis_diagnosis_code" class="java.lang.Object"/>
+	<field name="admis_diagnosis_info" class="java.lang.Object"/>
+	<field name="provis_diagnosis_code" class="java.lang.Object"/>
+	<field name="provis_diagnosis_info" class="java.lang.Object"/>
+	<field name="main_diagnosis_code" class="java.lang.Object"/>
+	<field name="main_diagnosis_info" class="java.lang.Object"/>
+	<field name="compl_diagnosis_code" class="java.lang.Object"/>
+	<field name="compl_diagnosis_info" class="java.lang.Object"/>
+	<field name="comorbidity_code" class="java.lang.Object"/>
+	<field name="comorbidity_info" class="java.lang.Object"/>
+	<field name="complaints" class="java.lang.Object"/>
+	<field name="anamnesis_of_disease" class="java.lang.Object"/>
+	<field name="anamnesis_of_life" class="java.lang.Object"/>
+	<field name="heredity" class="java.lang.Object"/>
+	<field name="habits" class="java.lang.Object"/>
+	<field name="height" class="java.lang.Object"/>
+	<field name="weight" class="java.lang.Object"/>
+	<field name="imt" class="java.lang.Object"/>
+	<field name="fiz_raz" class="java.lang.Object"/>
+	<field name="def_raz" class="java.lang.Object"/>
+	<field name="telo" class="java.lang.Object"/>
+	<field name="pitanie" class="java.lang.Object"/>
+	<field name="pokrovy" class="java.lang.Object"/>
+	<field name="limf_syst" class="java.lang.Object"/>
+	<field name="mish_syst" class="java.lang.Object"/>
+	<field name="svyaz_sust" class="java.lang.Object"/>
+	<field name="serd_sosud" class="java.lang.Object"/>
+	<field name="leg_dih" class="java.lang.Object"/>
+	<field name="pischevarenie" class="java.lang.Object"/>
+	<field name="mochepolovaya_syst" class="java.lang.Object"/>
+	<field name="nerv_syst" class="java.lang.Object"/>
+	<field name="organi_chuvstv" class="java.lang.Object"/>
+	<field name="sekrecia" class="java.lang.Object"/>
+	<field name="proc_type1" class="java.lang.Object"/>
+	<field name="proc_amount1" class="java.lang.Object"/>
+	<field name="proc1" class="java.lang.Object"/>
+	<field name="proc_type2" class="java.lang.Object"/>
+	<field name="proc_amount2" class="java.lang.Object"/>
+	<field name="proc2" class="java.lang.Object"/>
+	<field name="proc_type3" class="java.lang.Object"/>
+	<field name="proc_amount3" class="java.lang.Object"/>
+	<field name="proc3" class="java.lang.Object"/>
+	<field name="proc_type4" class="java.lang.Object"/>
+	<field name="proc_amount4" class="java.lang.Object"/>
+	<field name="proc4" class="java.lang.Object"/>
+	<field name="proc_type5" class="java.lang.Object"/>
+	<field name="proc_amount5" class="java.lang.Object"/>
+	<field name="proc5" class="java.lang.Object"/>
+	<field name="name" class="java.lang.Object"/>
+	<field name="surname" class="java.lang.Object"/>
+	<field name="patronymic" class="java.lang.Object"/>
+	<field name="gender" class="java.lang.Object"/>
+	<field name="birth" class="java.lang.Object"/>
+	<field name="med_book" class="java.lang.Object"/>
+	<field name="military_rank" class="java.lang.Object"/>
+	<field name="contingent" class="java.lang.Object"/>
+	<field name="service" class="java.lang.Object"/>
+	<field name="address_live" class="java.lang.Object"/>
+	<field name="phone_number" class="java.lang.Object"/>
+	<field name="address_work" class="java.lang.Object"/>
+	<field name="confidant" class="java.lang.Object"/>
+	<field name="policy" class="java.lang.Object"/>
+	<field name="past_illness" class="java.lang.Object"/>
+	<field name="allergic_anamnesis" class="java.lang.Object"/>
+	<title>
+		<band height="555" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="423" y="458" width="379" height="14" isRemoveLineWhenBlank="true" uuid="d1576246-4a5f-4637-b0ad-e6e49ecf1282"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["" + $F{surname} + " " +$F{name} + " " +$F{patronymic} + "     " + $F{admission_date}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="425" y="0" width="377" height="443" uuid="7d534b0c-53e8-43a4-96f4-19bc18ce675f"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[	- c целью выполнения своих обязательств, предусмотренных нормативными правовыми актакми или договорами, на предоставление, передачу моих персональных данных иным организациям, при условии, что указанные предоставления передача будут осуществляться с использованием машинных носителей или по каналам связи с соблюдением мер, обеспечивающих защиту моих персональных данных от несанкционированного доступа, а также при условии, что их прием и обработка буду осуществляться лицом, обязанным сохранять профессиональную тайну.
+	Даю согласие на то, что срок хранения моих персональных данных соответствует сроку хранения медицинской карты и составляет двадцать пять лет. По истечении указанного срока хранения моих персональных данных Оператор обязан уничтожить все мои персональные данные, включая ве копии на машинных носителях информации.
+	Передача моих персональных данных иным лицам ии иное их разглашение может осуществляться только с моего письменного согласия.
+	Я согласен(-на) со следующими действиями с моими персональными данными:
+	1. Обработка моих персональных данных в защищённых в установленном порядке автоматизированны информационных системах персональных данных пациентов;
+	2. Обработка моих персональных данных, защищённых в установленном порядке, без использования средств автоматизации.
+	Я оставляю за собой право отозвать свое согласие полностью или частинчо по моей инициативе на основании личного письменного заявления, в т.ч. и в случае ставших мне известных фактов нарушения моих прав при обработке персональных данных. В случае получения моего письменного заявления об отзыве настоящего согласия на обработку персональных данных Оператор обязан прекратить их обработку.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="401" y="0" width="1" height="555" uuid="ebbc5427-798c-4af2-8095-79a2073579a7"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="0" y="0" width="377" height="64" uuid="f2915f1c-095c-4ba9-8f1e-22f24a26f36d"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ПЕРЕЧЕНЬ ОПРЕДЕЛЕННЫХ ВИДОВ МЕДИЦИНСКИХ ВМЕШАТЕЛЬСТВ, НА КОТОРЫЕ ГРАЖДАНЕ ДАЮТ ИНФОРММИРОВАННОЕ ДОБРОВОЛЬНОЕ СОГЛАСИЕ ПРИ ВЫБОРЕ ВРАЧА И МЕДИЦИНСКОЙ ОРГАНИЗАЦИИ ДЛЯ ПОЛУЧЕНИЯ ПЕРВИЧНОЙ МЕДИКО-САНИТАРНОЙ ПОМОЩИ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="82" width="377" height="361" uuid="3cd31828-f5eb-49b0-91ea-e27bbf53d136"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[1. Опрос, в том числе выявление жалоб, сбор анамнеза
+2. Осмотр, в том числе пальпация, перкуссия, аускультация, риноскопия, фарингоскопия, непрямая ларингоскопия, вагинальное исследование (для женщин), ректальное исследование.
+3. Антропометрические исследования.
+4. Термометрия.
+5. Тонометрия.
+6. Неинвазивные исследования органа зрения и зрительных функций.
+7. Неинвазивные исследования органа слуха и слуховых функций.
+8. Исследование функций нервной системы (чувствительной и двигательной сферы).
+9. Лабораторные методы обследования, в том числе клинические, биохимические, бактериологические, вирусологические, иммунологические.
+10. Функциональные методы обследования, в том числе электрокардиография, суточное мониторирование артериального давления, суточное мониторирование электрокардиограммы, спирография, пневмотахометрия, пиклуометрия, рэонцефалография, электроэнцефалография, кардиото-кография (для беременных).
+11. Рентгенологические методы обследования, в том числе флюорография (для лиц старше 15 лет) и рентгенография, ультразвуковые исследования, допплерографические исследования.
+12. Введение лекарственных препаратов по назначению врача, в том числе внутримышечно, внутривенно, подкожно, внутрикожно.
+13. Медицинский массаж.
+14. Лечебная физкультура.]]></text>
+			</staticText>
+		</band>
+	</title>
+</jasperReport>

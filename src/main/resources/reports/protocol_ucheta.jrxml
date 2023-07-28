@@ -1,0 +1,2255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4a3ae420-4ce0-4fc4-8623-d0f86a115c4a">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#FFBFBF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="style1" forecolor="#000000">
+		<box leftPadding="2">
+			<pen lineWidth="0.5"/>
+			<topPen lineWidth="0.5"/>
+			<leftPen lineWidth="0.5"/>
+			<bottomPen lineWidth="0.5"/>
+			<rightPen lineWidth="0.5"/>
+		</box>
+	</style>
+	<subDataset name="Table Dataset 1" uuid="ad80ed62-fc80-479e-9eba-e49923199ab4"/>
+	<queryString>
+		<![CDATA[select name, surname, patronymic, history, proc1, proc2, proc3, proc4, proc5, proc_type1, proc_type2, proc_type3, proc_type4, proc_type5, proc_amount1, proc_amount2, proc_amount3, proc_amount4, proc_amount5   from examination join patient_info on patient_info.id = examination.patient_id where examination.id =48]]>
+	</queryString>
+	<field name="name" class="java.lang.Object"/>
+	<field name="surname" class="java.lang.Object"/>
+	<field name="patronymic" class="java.lang.Object"/>
+	<field name="history" class="java.lang.Object"/>
+	<field name="proc1" class="java.lang.Object"/>
+	<field name="proc2" class="java.lang.Object"/>
+	<field name="proc3" class="java.lang.Object"/>
+	<field name="proc4" class="java.lang.Object"/>
+	<field name="proc5" class="java.lang.Object"/>
+	<field name="proc_type1" class="java.lang.Object"/>
+	<field name="proc_type2" class="java.lang.Object"/>
+	<field name="proc_type3" class="java.lang.Object"/>
+	<field name="proc_type4" class="java.lang.Object"/>
+	<field name="proc_type5" class="java.lang.Object"/>
+	<field name="proc_amount1" class="java.lang.Object"/>
+	<field name="proc_amount2" class="java.lang.Object"/>
+	<field name="proc_amount3" class="java.lang.Object"/>
+	<field name="proc_amount4" class="java.lang.Object"/>
+	<field name="proc_amount5" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="802" height="31" uuid="47ac82f2-3d68-4acc-90de-fc7d42a7f830"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ПРОТОКОЛ УЧЕТА ВЫПОЛНЕНИЯ ВРАЧЕБНЫХ НАЗНАЧЕНИЙ
+(вкладыш к медицинской карте стационарного больного № ____________)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="31" width="802" height="20" uuid="fac728d7-919b-4067-bf30-c8cef7ba2370"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman"/>
+				</textElement>
+				<text><![CDATA[Фамилия, имя, отчество _______________________________________________________________________________ Палата № ___________]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="206" y="29" width="391" height="14" uuid="125377e7-02a6-4ef8-8f3e-c4b3c1f64481"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+ $F{surname} + " " +$F{name} + " " +$F{patronymic}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="509" y="10" width="100" height="14" uuid="a2f0a883-0d31-4291-a853-765c20647d60"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{history}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="351" splitType="Prevent">
+			<staticText>
+				<reportElement positionType="Float" x="0" y="196" width="802" height="67" uuid="b705a821-f11a-4b2e-8203-af2b1a631029"/>
+				<textElement>
+					<font fontName="Times New Roman" size="8"/>
+				</textElement>
+				<text><![CDATA[Примечания:
+1. В протоколе учета выполнения врачебных назначений палатная сестра вписывает все назначенные и записанные врачом в медицинскую карту стационарного больного диагностические исследования, лечебные процедуры и медикаменты.
+2. Выполнение назначений палатной медицинской сестрой отмечается в графах дневника протокола знаком «+» или записью дозы инъекций (например, 0.5, 1.0 и т.д.), или записью часов и минут выполнения срочных назначений.
+3. После выполнения назначений медицинская сестра расписывается в протоколе ежедневно за каждое выполненное назначение. 
+4. При выписке больного протокол учета выполнения врачебных назначений подшивается к медицинской карте стационарного больного.
+5. При необходимости для удобства в работе одновременно может заполняться несколько протоколов учета выполнения врачебных назначений, например, постовой и процедурной медицинскими сестрами отделения. 
+]]></text>
+			</staticText>
+			<elementGroup/>
+			<elementGroup>
+				<staticText>
+					<reportElement style="style1" x="574" y="13" width="19" height="15" uuid="c394b66f-6e57-4019-be90-6383c88f4c9f"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[20]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="517" y="13" width="19" height="15" uuid="7ad0923f-c27d-4273-8c39-3683db8a0ce0"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[17]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="593" y="13" width="19" height="15" uuid="b5e7d6f3-106f-478f-9f8a-d6a39f39e489"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[21]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="726" y="13" width="19" height="15" uuid="7be735c7-86af-4ca3-a2a2-d1db79140944"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[28]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="669" y="13" width="19" height="15" uuid="c1d5c2d7-17f4-4282-abed-3023132bee3a"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[25]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="479" y="13" width="19" height="15" uuid="2b26c101-007a-4a31-ae67-dced7e87a7d5"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[15]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="498" y="13" width="19" height="15" uuid="314314bf-11e0-4756-80d2-39e2ffd92905"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[16]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="365" y="13" width="19" height="15" uuid="c8196b90-3054-4747-ada1-d303240f2831"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[9]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="251" y="13" width="19" height="15" uuid="7068935e-37dd-45b7-b978-cd6c6b8c300d"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[3]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="536" y="13" width="19" height="15" uuid="cfc3f4e9-0e94-419b-b912-d904b1a66b53"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[18]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="783" y="13" width="19" height="15" uuid="402327d3-9a6f-49c6-ab6a-54d0c8da09f8"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[31]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="0" y="0" width="213" height="28" uuid="23ed8449-ce51-4d32-acb3-1987a2669879"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10"/>
+					</textElement>
+					<text><![CDATA[Медицинские процедуры и лекарственные назначения]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="688" y="13" width="19" height="15" uuid="9cd3dffb-8d94-442f-8cd7-1508042a944e"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[26]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="213" y="13" width="19" height="15" uuid="4cf6bd70-99d8-4313-a1ee-cbde01d5c856"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[1]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="460" y="13" width="19" height="15" uuid="bf067e8b-ba56-4fe3-9385-34613d386799"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[14]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="555" y="13" width="19" height="15" uuid="88fdeec6-4f74-4109-a3ab-b76eb9d0a280"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[19]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="327" y="13" width="19" height="15" uuid="8884042a-2234-4b5d-b5a5-4a836d119143"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[7]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="441" y="13" width="19" height="15" uuid="f1381c2d-1090-45cc-be71-a53485937cef"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[13]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="764" y="13" width="19" height="15" uuid="eaa135e5-b9e4-4acb-abeb-2d830cab5dc9"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[30]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="745" y="13" width="19" height="15" uuid="7443432b-ab68-42af-83d5-58565039e2ce"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[29]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="213" y="0" width="589" height="13" uuid="e56fa1c4-6ff2-4ac3-acbd-9b3dfc86df3a"/>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[Месяц:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="707" y="13" width="19" height="15" uuid="ade2eecf-7a87-480a-b8b9-f26f026869e9"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[27]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="232" y="13" width="19" height="15" uuid="27b622a5-2e08-437e-9d71-0981e6376af6"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[2]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="631" y="13" width="19" height="15" uuid="114c3531-0471-46e7-b827-5d602145b565"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[23]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="650" y="13" width="19" height="15" uuid="456ea6b0-201f-478d-9f3b-b840cff1f9de"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[24]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="403" y="13" width="19" height="15" uuid="d0d7cade-ddac-48f1-92ee-5c45c62a7591"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[11]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="289" y="13" width="19" height="15" uuid="aa503b91-3e59-42e2-9f2d-8c732d0addaf"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[5]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="308" y="13" width="19" height="15" uuid="2fe6deb0-09c2-417a-b71e-bc160e3425f3"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[6]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="346" y="13" width="19" height="15" uuid="74e38043-741b-49e1-8466-c24321e9553c"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[8]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="270" y="13" width="19" height="15" uuid="7962dd75-d421-4f2a-87e0-961937acb73e"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[4]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="422" y="13" width="19" height="15" uuid="a7d62d7e-d9f5-4f9e-b8f5-c08d013718ec"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[12]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="612" y="13" width="19" height="15" uuid="ddc7001a-e921-4ce1-89d6-81d9a430fcf0"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[22]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="style1" x="384" y="13" width="19" height="15" uuid="e75046a5-d623-421b-b299-b882ae0604cf"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[10]]></text>
+				</staticText>
+			</elementGroup>
+			<frame>
+				<reportElement positionType="Float" x="0" y="84" width="802" height="14" isRemoveLineWhenBlank="true" uuid="db80713b-2ebd-485c-a72d-67b72ba823d1"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="631" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="c95ab1db-bbe5-4fe6-8005-cf25244eea1f">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="498" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="3d50c6e5-80c7-44b6-9d9e-b4f2a4746c9e">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="707" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="d0d0d6f7-9f37-4e98-913d-0782558e2bf8">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="726" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="a9c09297-0993-4c2d-8cbd-3fa04ada5eea">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="232" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="0f42da43-9d92-469c-a24e-bd6d11105066">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="251" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="585da6e4-efb7-44d1-b051-83efd3d20e8b">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="213" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="88dff25e-86da-4d2a-9807-64ab775075b2">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="593" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="dfbde76b-b351-4fd6-a0e4-279ed2f05d51">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="441" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="79ca114b-49eb-447c-a0bf-24cdb2489b2d">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="308" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="8a23d1d8-e05b-4952-98e1-0dd042a9995f">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="612" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="791b3cab-1cce-49cb-9971-48403b0f75ff">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="460" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="bca835ee-2548-42f3-befe-0d05767cc3ad">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="517" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="f842afc3-55c7-4745-a916-b110cfde41f3">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="365" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="1af11298-656b-4244-9633-2f52f01c53b8">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="270" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="934da9f0-a7fa-470d-a614-db1a73380f04">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="422" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="30fd17cc-b6d5-4284-ae31-edb6db5a7db4">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="346" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="b70cd6c2-b502-48d5-abac-efc105e40837">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="745" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="b46bbcc4-d6c0-4b93-ac0a-561ae079c5e0">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="289" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="a97f1c1a-62ab-4550-99cf-cc086ca777c1">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="574" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="eaa5d2cb-1502-4b8d-8693-f292b8f7b986">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="669" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="5808d9fd-ea33-43a3-b1de-bb4ff16b822b">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="650" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="9067b004-174f-4e71-bcd1-ea22267cce33">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="764" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="3e34b3e5-9246-4630-8167-090bd40112e4">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="479" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="605cbb86-0965-4228-99f0-a5438f52923b">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="403" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="b2546dc6-97e3-4cea-8a24-a9be05934343">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="536" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="78102400-c33f-42f7-9336-93814531cedd">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="555" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="7de4f2b0-bf49-403d-8067-b9eee4c035d5">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="327" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="14449a01-7879-470a-b44b-18d2712e63dd">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="384" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="ae79befa-68fa-4dd6-a9e8-8dde1936288e">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="688" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="d077a0fd-48a8-4920-940c-d8aae9a83748">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="783" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="f120840f-eb3b-4d8d-bfa1-0544b633ac5e">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="213" height="14" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="1f00d878-8463-441f-8515-c244aaa49e21">
+						<printWhenExpression><![CDATA[!$F{proc5}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""+$F{proc5}+"\n"+$F{proc_type5}+ " №"+$F{proc_amount5}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="70" width="802" height="14" isRemoveLineWhenBlank="true" uuid="cc0e1923-9a8b-454d-a776-bdb4036acb56"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="574" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="baa70bd1-d7c3-4e05-9c2a-afe9f8745b81">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="517" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="a31025fb-1e32-4b1d-aa49-fc24f2b98740">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="384" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="fd869100-855a-454f-9e56-8a5d77d3ad74">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="251" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="3587362c-f525-4a5f-92fd-2de9dfd35fb0">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="270" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="0e1c2a85-5728-4cc9-92fa-7858b0669466">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="289" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="d403e33a-b898-4858-bcbc-f8d8e717c7c0">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="688" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="ef133ae2-af8d-4e59-9210-f0c1a2ad2f99">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="441" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="4b181323-f27a-403f-ab3b-3161bd98138a">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="745" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="5f8929fa-04ac-4df1-b2f4-2b77ffd135fd">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="536" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="1a70a6e7-2463-4eb4-b48f-c8cbfb95336d">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="232" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="ba64021c-e4d0-4cdf-a627-256ae078e3a1">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="612" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="e229d2d4-6027-4059-a434-7e67981768fc">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="669" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="ff09ee71-7979-4533-9f88-ce73e8fa28eb">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="403" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="88ca7775-48c9-43e0-bf0c-4450da93a870">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="479" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="d5d05ee4-736b-401d-a512-72e9840ca143">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="726" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="3aca9338-0f29-40f2-97eb-ca04f6883e78">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="650" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="8ac7fbfc-5d08-40b5-abaf-4114ea53ff71">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="764" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="21e186ab-4f3d-4a2b-a033-5d13ebe5443f">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="365" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="85f2a23e-46cf-4ada-b6f1-ae0214909f67">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="422" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="dc3b83f7-dcb5-45b0-9c23-847e2fb44fd4">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="460" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="f7d90dc4-a50b-4527-8ab8-adeb03944fc7">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="555" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="c5295ecc-609d-4363-aabd-cd61e1f415fb">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="498" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="9f8c7250-c37a-433d-9d87-a785d14e28fd">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="308" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="c0a4e83f-48d4-4343-be65-f92198859715">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="593" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="37b866fa-d059-4e23-bf79-b99ac2b216d9">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="631" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="886577d1-c8ce-4e0b-892b-92db37c0a6fd">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="213" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="a9e57620-87c8-4a10-88c9-ddd93c6500b5">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="346" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="55d5f687-2e2a-48d2-b7d3-084ae35230da">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="707" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="684a2107-5dbc-4446-af40-721ca6c9397b">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="327" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="d93a5fa2-02e0-42e4-9ba8-dfb229ec7e61">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="783" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="5993aa1b-5e03-44a1-a3ee-f31e31ab917e">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="213" height="14" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="6d8fe232-5a05-4052-8286-b0f35ce93d1d">
+						<printWhenExpression><![CDATA[!$F{proc4}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""+$F{proc4}+"\n"+$F{proc_type4}+ " №"+$F{proc_amount4}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="28" width="802" height="14" isRemoveLineWhenBlank="true" uuid="4622d7e5-2c19-4b33-8119-6acf85e61d0b"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="422" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="e55f6ca1-ffe4-4cfc-9ed0-c29cded6ad3a">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="479" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="e1202881-e50b-4493-a9e9-0c360aa33073">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="783" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="340a86cb-1716-453a-b243-c55f637da00a">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="612" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="e44ac05a-19a1-49de-bf30-d973f3b1b403">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="764" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="d5a13223-7bbe-467e-b344-7e4bfb3872f2">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="213" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="17d96125-4a6a-45a0-b78e-feaa49649667">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="327" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="b0046581-77ab-4011-86b2-fecbb5c55661">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="517" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="06ccc71f-81b7-4f43-a1e5-1bd4d2ce8f97">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="213" height="14" isRemoveLineWhenBlank="true" uuid="05cdbcfb-0c23-458e-8130-74de4b2bcaf4">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""+$F{proc1}+"\n"+$F{proc_type1}+ " №"+$F{proc_amount1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="688" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="3ad7252c-2b0d-48a2-b64a-2cc4641bd0cb">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="270" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="07f952be-3f7c-48bb-8227-1c0e824d512d">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="726" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="872ab59e-759f-4a91-a765-a7f5a969ef3e">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="574" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="a4f39e7c-512f-4fb3-a40a-2fdcb0d0cca9">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="631" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="ef163f0b-ebcc-48ca-9cb3-a09af2b80bd2">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="707" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="5338db95-0a7a-40e9-b485-5d6f62f0d844">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="232" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="01b85a88-d081-4af5-bd0b-e227518c6b8e">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="441" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="b7680cb4-faa1-4bde-93b3-fcd426241ff5">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="536" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="149c9f47-f52e-44a3-bd98-68ed55dd3159">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="498" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="a481cc10-b53f-47f4-bce5-f3662f1995a9">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="745" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="b3a19b53-fbab-4822-a0d1-24ff873332fb">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="384" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="36387a96-e53d-47f3-91c2-d0305d7e42b1">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="460" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="b3037653-022e-4714-91c7-a07caa7cc520">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="251" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="ebf84eac-1414-47d6-a58d-c0e0184ce10d">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="403" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="f48e4ce8-8407-4e52-bbc3-4780561bf793">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="308" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="62ff1b4d-520f-4ddf-9ee9-3fa67c092ee9">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="669" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="f4338095-709e-4341-907d-1f0e10cf710a">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="346" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="b40c558d-4018-47e3-80ea-a0c3d61ea303">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="593" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="6d0d480f-6705-4032-bd47-26ca8fa37fb5">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="650" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="05fb3ee0-d102-4d27-8a0f-d40e1eca8b53">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="365" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="3a1fc72f-f528-4b6e-9528-9da275a4642e">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="555" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="c4019009-f1d9-47aa-beb5-2fee6187dcdc">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="289" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="1c920880-0dd4-4642-ac35-ffa0ecb01a42">
+						<printWhenExpression><![CDATA[!$F{proc1}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="42" width="802" height="14" isRemoveLineWhenBlank="true" uuid="cd0eade4-9bc7-4a20-9716-d62750f479b6"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="422" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="7432924d-f1a7-4785-874b-d03bae3df75d">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="517" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="a2b60dc8-14a8-4dba-861f-70edc4277022">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="403" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="6701c7c0-08bc-4ecd-acf6-c5376031504f">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="764" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="350a9cda-f986-46bb-b948-cb67edaf5116">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="289" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="fc7c09dc-0cc0-4bf5-bbd4-17681f8d4acf">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="460" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="995e997a-1bc7-430b-8830-66daedbe545b">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="346" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="889fe846-1ad6-401c-9a12-68e047435691">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="365" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="11760f7b-ace1-408c-b51d-904aff8ff0ce">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="726" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="e88da86e-04ff-492d-8c21-ab336998b79e">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="688" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="6af26d8a-0be2-47eb-80b1-aaa7c50b28d9">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="384" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="81631bb8-5ff1-4deb-af00-227a7882fe23">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="555" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="08e0e5c0-3d01-4220-ad80-ef1aec5fec5a">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="498" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="c40d4a0e-6813-4db7-8857-803fb6cb4369">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="631" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="d442f2c6-7d08-4b78-9c5e-d6614e23dc35">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="232" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="5c379750-e8a8-49ac-bbe6-d7995569764d">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="270" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="e26fefe5-fc7f-409a-97a0-613fff15049f">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="574" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="da8ed06b-c028-4d0d-9e9b-bea84aa464a4">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="593" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="1befed0b-d532-4efb-bc90-1da2f6476638">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="669" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="6ca65f7c-5960-407b-81f3-824e393b6285">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="441" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="d224e079-84d9-472a-8b68-21a5577d516c">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="783" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="2051704e-9913-4f5d-97d7-d31c068fccb4">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="327" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="6dd3a22a-b9d6-4bfc-b80e-be5e846bd790">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="479" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="d4961477-954c-463b-bd2d-e8fd41695c8e">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="745" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="fb4ed444-562f-4fb0-a339-ec4d8d3e01cb">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="707" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="9efe5dcd-ad01-4006-a432-bb38fee37541">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="612" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="7445dca7-fa59-48af-8a94-c6e5abd0b4b8">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="308" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="5f0c3d2e-516f-44cf-b052-900e547e874c">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="536" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="9acb782c-d797-4144-b740-7d4fbbe607e3">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="213" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="3fec45a9-1995-40c0-8a95-ce82aae309e4">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="251" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="54b8fc86-3a75-4c76-8364-3cc75feb4850">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="650" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="90d85c70-de57-44ce-8d0c-a69f547e489b">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="213" height="14" isRemoveLineWhenBlank="true" forecolor="#000000" uuid="12b1c42d-7dfc-45e3-a51e-ea8298c541b4">
+						<printWhenExpression><![CDATA[!$F{proc2}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""+$F{proc2}+"\n"+$F{proc_type2}+ " №"+$F{proc_amount2}]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="56" width="802" height="14" isRemoveLineWhenBlank="true" uuid="6b85da17-f9c1-4c22-9c7a-33c8d29f0642"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="650" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="d562ccb9-f40d-4871-b04f-2474a72b5148">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="422" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="42f20eb2-f896-431a-a041-13b594106070">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="384" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="4ba72241-92a5-4e12-bc10-0075ddf10969">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="251" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="1d939109-cf6d-449a-a6cf-1597477f2da7">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="327" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="2919b473-4534-4e6c-aa25-dca6261c3815">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="669" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="3a8e446c-8273-42df-a1cf-696913946dbb">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="536" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="a8be3cfe-18ae-40a2-bef4-dbde41ea7cc9">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="289" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="d8b93c63-3c66-425e-976e-35c97b01c4df">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="574" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="96c65e80-f3f7-4ecf-9a3f-5dec3258f6dd">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="764" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="e7046c07-725a-4fca-8962-8b95c6f9b401">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="213" height="14" isRemoveLineWhenBlank="true" uuid="61f281a3-5611-4f19-a2e6-31b7f6e3c01a">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement>
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""+$F{proc3}+"\n"+$F{proc_type3}+ " №"+$F{proc_amount3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="593" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="c1f052bf-b38c-4390-9f64-3d463a1d304b">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="517" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="e332c41e-56c1-406c-aa72-40bc4aa4c4e2">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="308" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="fbb95527-0d33-46e2-a1aa-dbadc41ad2c0">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="232" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="6b798f99-4faf-449b-b845-01b5035f1e36">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="270" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="293d8a58-ee55-4b02-91fa-baac2bc838e5">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="213" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="fcd7716f-ca21-4566-9a30-955ddef75ccf">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="479" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="ffb2c13f-7611-4d26-bc45-cee2234d50df">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="688" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="578c2750-c83b-4003-90f6-4a07891328f3">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="612" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="26e17efc-2aac-485e-a086-0737c783f2b2">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="631" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="8d7e731b-14bc-425b-8523-4f03a5fc862d">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="783" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="bfcd1c4a-705d-4719-aead-8ab45190c1bb">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="441" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="6416ea1a-66d8-41c1-98e5-d919f5b71e54">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="403" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="58ec6345-9723-4ce2-828e-9ab5a1b56f7c">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="365" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="ec059e14-5fba-48b1-aee0-3574585fa871">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="726" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="0a9e6e13-527c-49c0-89a8-942982af1310">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="707" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="877c4aff-abd5-4bdd-99ca-24257664e211">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="346" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="d113c800-4fab-437f-ac80-2d4e74e3e235">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="555" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="ee69af94-fb27-40b9-a7e3-a42706feca1a">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="498" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="4f21958a-a94f-4851-b079-4fad8b3dbfa6">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="745" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="86ca8a45-7ae2-473a-a7cb-33810f44e910">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="style1" positionType="Float" stretchType="RelativeToTallestObject" x="460" y="0" width="19" height="14" isRemoveLineWhenBlank="true" forecolor="#FFFFFF" uuid="777748c1-7448-4e00-9a00-fdb6b3dbd026">
+						<printWhenExpression><![CDATA[!$F{proc3}.equals("")]]></printWhenExpression>
+					</reportElement>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA["."]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="134" width="802" height="36" uuid="641b67be-f913-485e-be91-05d5c575469c"/>
+				<staticText>
+					<reportElement style="style1" positionType="Float" x="0" y="0" width="213" height="36" uuid="de6ca9c7-b16b-4419-ae95-df097cf5929b"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[Подпись палатной, процедурной или дежурной медицинской сестры]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="441" y="0" width="19" height="36" uuid="f9724ba7-67f5-40c4-a6c6-8f28c3227acc"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="308" y="0" width="19" height="36" uuid="ed0fb5ca-29ba-4933-bf71-0bc024186146"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="346" y="0" width="19" height="36" uuid="c0e9b551-07bc-4486-889f-41469ce67900"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="612" y="0" width="19" height="36" uuid="9cbece3e-b5b5-44ce-9f63-95b423acfec0"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="517" y="0" width="19" height="36" uuid="c1c782e6-f2a2-46ac-8812-dc15b9181c3c"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="327" y="0" width="19" height="36" uuid="7004c1fc-80ab-4810-98ca-5d23c010d4cc"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="460" y="0" width="19" height="36" uuid="5b34cf6a-bab9-4370-a6c2-e72659c4fbe5"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="631" y="0" width="19" height="36" uuid="0e9be5b6-3daf-4e2e-b488-0ca623ca7f37"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="479" y="0" width="19" height="36" uuid="02cacf0f-675b-464d-8654-81a44512ae5a"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="574" y="0" width="19" height="36" uuid="eba33ee7-78aa-4f44-9dc4-efae4cebc474"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="365" y="0" width="19" height="36" uuid="7d68d013-6888-4db1-a160-096080af88fc"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="422" y="0" width="19" height="36" uuid="ded24b2d-0d92-4189-a2fd-f90a8cfafd5d"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="384" y="0" width="19" height="36" uuid="6bd095f4-d7b1-4f43-9f5f-7ad29c6637b7"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="213" y="0" width="19" height="36" uuid="5a0fe9b5-e0ef-4518-a459-518087348208"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="764" y="0" width="19" height="36" uuid="46841fd8-6a9a-4010-87ff-c73dba2f1379"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="270" y="0" width="19" height="36" uuid="5ce8892a-4786-42d2-b48b-3f2a19a0bfb1"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="707" y="0" width="19" height="36" uuid="7397158f-ade1-4451-be2b-3f0b70785bf1"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="536" y="0" width="19" height="36" uuid="d55053a6-829b-40ca-a48b-76446d232164"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="726" y="0" width="19" height="36" uuid="f89435c6-afa2-4dad-8555-a9a964835a8c"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="783" y="0" width="19" height="36" uuid="75b2fba9-3e18-4321-85b0-533005ac55a1"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="498" y="0" width="19" height="36" uuid="e2587280-60ce-4b10-bd68-0bc76d9f0be0"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="688" y="0" width="19" height="36" uuid="1c4c5c4c-b08b-4d15-b3cc-b747df633f43"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="593" y="0" width="19" height="36" uuid="89c3258f-9968-40f3-88c2-9084791adabb"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="289" y="0" width="19" height="36" uuid="a64510c1-0bcd-4331-b207-5e09512e2bbf"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="650" y="0" width="19" height="36" uuid="e0798aaf-ae77-4c17-add4-2d2e075eb3ae"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="251" y="0" width="19" height="36" uuid="45eac18f-b3a9-4b3d-9110-84c6bf089fad"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="669" y="0" width="19" height="36" uuid="c3a1faf2-2b09-4770-95e5-c0b70ad8943b"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="555" y="0" width="19" height="36" uuid="dbc4865b-1c3d-4e64-b376-453415c58e21"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="232" y="0" width="19" height="36" uuid="03631c64-a858-4180-8db3-4ba73342dee6"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="403" y="0" width="19" height="36" uuid="893defde-dcfa-4bd2-bb46-bc9b65a497dd"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="745" y="0" width="19" height="36" uuid="cbafd8de-1918-48da-b6fd-882a5a6e047c"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement positionType="Float" x="0" y="98" width="802" height="36" uuid="44abe080-82fb-4981-9a1d-ffaca21a48e7"/>
+				<staticText>
+					<reportElement style="style1" positionType="Float" x="0" y="0" width="213" height="36" uuid="b47e557a-204a-4856-81be-615d2f0bc1a9"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<text><![CDATA[Подпись врача]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="441" y="0" width="19" height="36" uuid="5daf7191-3362-499a-b9e8-12e12802976f"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="308" y="0" width="19" height="36" uuid="08f193cf-875a-4744-8b2c-1c4cbe3d2f4d"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="346" y="0" width="19" height="36" uuid="d87f8c38-e5c8-4720-bd0a-266b3efeaa05"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="612" y="0" width="19" height="36" uuid="65072687-56a4-492e-a79d-27ef9ecbeb50"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="517" y="0" width="19" height="36" uuid="10b19ae5-4981-4358-9a1b-2ca05c38fc3f"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="327" y="0" width="19" height="36" uuid="abd499bd-4275-45bf-9d94-5b17faf0a134"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="460" y="0" width="19" height="36" uuid="0b2c4959-1f14-41e3-8e46-5df486ccc4f9"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="631" y="0" width="19" height="36" uuid="69588a6a-063b-4e0e-8577-69e9e69e6859"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="479" y="0" width="19" height="36" uuid="6af64c9c-6ef9-4e97-9951-22e057192227"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="574" y="0" width="19" height="36" uuid="ac6fbd3c-110d-4595-8506-eee991ed62a5"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="365" y="0" width="19" height="36" uuid="ff8cbbe6-f2d1-4ff7-b7ba-ef40d955a1f0"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="422" y="0" width="19" height="36" uuid="9eddf71e-2166-4593-9312-5e8108830673"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="384" y="0" width="19" height="36" uuid="e82b2a91-8f18-47f1-8b6a-2102045e0c48"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="213" y="0" width="19" height="36" uuid="71308cdc-1b80-42ef-8040-f3ce88e7a8cb"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="764" y="0" width="19" height="36" uuid="bb58d909-e92a-47db-827b-0280ccc85dc1"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="270" y="0" width="19" height="36" uuid="d1014638-d798-44e9-bc29-48037675cb19"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="707" y="0" width="19" height="36" uuid="b339cb17-fbc1-42c8-a136-554193c12302"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="536" y="0" width="19" height="36" uuid="3f07e12e-eff7-4795-a509-7c5b323067a3"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="726" y="0" width="19" height="36" uuid="876daeba-5975-4105-93f3-28e5a06a1afc"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="783" y="0" width="19" height="36" uuid="1c9e6dbe-e7c4-489d-a7f8-8881ed6595fb"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="498" y="0" width="19" height="36" uuid="8d0542d0-0d22-4441-9ae6-8fa21f9da0b2"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="688" y="0" width="19" height="36" uuid="9e68102a-fc38-4aa5-849a-a5a013dbe555"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="593" y="0" width="19" height="36" uuid="935859d1-1658-4c23-a070-c148b7fe4fce"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="289" y="0" width="19" height="36" uuid="56a2be8a-581e-486b-90d2-b48a2b50903d"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="650" y="0" width="19" height="36" uuid="e57855dc-fdf1-4345-b847-c6a8c018ed3c"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="251" y="0" width="19" height="36" uuid="f2ad690c-a563-4152-bbb9-6fa23b4c13a1"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="669" y="0" width="19" height="36" uuid="df64cb47-29bf-41bd-af34-656ecab02772"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="555" y="0" width="19" height="36" uuid="82c7abe9-8e22-4c95-a524-1a6b78f0cabe"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="232" y="0" width="19" height="36" uuid="d6da1926-b356-4bc7-81cb-bfce4fb88c4e"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="403" y="0" width="19" height="36" uuid="280dbb1b-d832-4632-ac87-a21e29bee630"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="style1" positionType="Float" x="745" y="0" width="19" height="36" uuid="5b4fb102-1273-4813-b072-1d15a11d56f0"/>
+					<textElement textAlignment="Center" markup="none">
+						<font fontName="Times New Roman"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

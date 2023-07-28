@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f8ea9279-4968-40e4-b0da-4f01f3301f3b">
+	<property name="ireport.zoom" value="2.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from patient_info]]>
+	</queryString>
+	<field name="id" class="java.lang.Object"/>
+	<field name="name" class="java.lang.Object"/>
+	<field name="surname" class="java.lang.Object"/>
+	<field name="patronymic" class="java.lang.Object"/>
+	<field name="gender" class="java.lang.Object"/>
+	<field name="birth" class="java.lang.Object"/>
+	<field name="med_book" class="java.lang.Object"/>
+	<field name="military_rank" class="java.lang.Object"/>
+	<field name="contingent" class="java.lang.Object"/>
+	<field name="service" class="java.lang.Object"/>
+	<field name="address_live" class="java.lang.Object"/>
+	<field name="phone_number" class="java.lang.Object"/>
+	<field name="address_work" class="java.lang.Object"/>
+	<field name="confidant" class="java.lang.Object"/>
+	<field name="policy" class="java.lang.Object"/>
+	<field name="past_illness" class="java.lang.Object"/>
+	<field name="allergic_anamnesis" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="356" splitType="Stretch">
+			<staticText>
+				<reportElement x="120" y="0" width="310" height="17" uuid="fe27cc43-2a3e-4898-96ee-30b32aaac98f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ЭПИДЕМИОЛОГИЧЕСКАЯ АНКЕТА ПАЦИЕНТА]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="17" width="391" height="16" uuid="c1f86367-395f-4fa5-888e-80d59e58e4c8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Ф.И.О.: "+ $F{surname} + " " +$F{name} + " " +$F{patronymic}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="391" y="17" width="164" height="16" uuid="250cbf4c-f8e7-4fb8-888b-112cb084690c"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Дата рождения: "+ $F{birth}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="33" width="555" height="28" uuid="3053c3fc-9cdb-4220-891b-290ea92f6ec5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Адрес факт. проживания: "+$F{address_live}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="391" y="61" width="164" height="16" uuid="9b3b01cc-75cc-4dc6-b4d8-e1da0da7ef03"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["телефон: "+$F{phone_number}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="77" width="555" height="50" uuid="17ac5bd3-a926-4a8d-a8ab-6c76b2567837"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Уважаемый пациент, в связи с развитием неблагоприятной санитарно-эпидемиологической обстановки и в целях реализации постановления Главного государственного санитарного врача Российской Федерации от 18.03.2020 № 7 просим Вас ответить на вопросы:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="0" y="135" width="555" height="154" uuid="57ade462-f5f0-4dbb-b08d-7376525cdcd5"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="493" y="135" width="31" height="20" uuid="9d04410d-04c0-4626-808c-5d1814bc39e3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Да]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="524" y="135" width="31" height="20" uuid="f3859b4b-9a59-446a-b0c5-97b6a2c9516c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Нет]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="155" width="493" height="20" uuid="c7feed08-fdc7-41ef-a08f-6fe56703f4dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Была ли у вас повышенная температура за последние 14 дней?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="175" width="493" height="34" uuid="5d5ef9ee-27ee-4069-ae79-2758c56fc80c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Были ли у вас симптомы респираторного заболевания, такие как кашель, или затрудненное дыхание в течении послених 14 дней?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="209" width="493" height="20" uuid="403fc57c-064f-4b89-9157-0c290b2123a0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Вы выезжали за пределы Российской Федерации в течение последних 14 дней?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="229" width="493" height="20" uuid="c7d2269e-7762-4b05-a446-cff388ed1ae5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Вы контактировали с человеком, которому был поставлен диагноз новой коронавирусной инфекции COVID-19?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="249" width="493" height="20" uuid="29bf7ee0-1f8c-418c-830b-0b943d6fb78d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Вы общались с человеком, который приехал из-за границы в течение последних 14 дней?]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="269" width="493" height="20" uuid="5225b9eb-a64a-448d-b620-82106d669859"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<text><![CDATA[Вы находитесь в режиме изоляции (карантине)?]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="304" width="524" height="19" uuid="c8862356-41f3-430f-bf78-4ec439b78f78"/>
+				<textElement>
+					<font fontName="Times New Roman" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Я, "+ $F{surname} + " " +$F{name} + " " +$F{patronymic}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="323" width="538" height="17" uuid="b7cf4b3e-a620-4723-a9f4-8c65fb6bb7ef"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ПОДТВЕРЖДАЮ ПОЛНОТУ И ДОСТОВЕРНОСТЬ ПРЕДСТАВЛЕННЫХ МНОЮ ДАННЫХ.]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="174" width="555" height="1" uuid="9eeb3ed0-c559-424e-bf0d-255dc9ae96d3"/>
+			</line>
+			<line>
+				<reportElement x="0" y="154" width="555" height="1" uuid="d4fcccdf-cf4a-4a4c-a1be-8bd07fb19b9e"/>
+			</line>
+			<line>
+				<reportElement x="0" y="208" width="555" height="1" uuid="f31c4215-b059-42cd-a4b7-7610713429b7"/>
+			</line>
+			<line>
+				<reportElement x="0" y="228" width="555" height="1" uuid="f1edd848-23ba-419d-9a2b-89e858d79976"/>
+			</line>
+			<line>
+				<reportElement x="0" y="248" width="555" height="1" uuid="95d1ef06-b8ab-4571-9b59-3c7f6a90847f"/>
+			</line>
+			<line>
+				<reportElement x="0" y="268" width="555" height="1" uuid="8da46c27-36ec-40ab-85f0-0249cd259d8a"/>
+			</line>
+			<line>
+				<reportElement x="493" y="135" width="1" height="154" uuid="2ac582cc-e17c-43bb-8a33-59bab294dcab"/>
+			</line>
+			<line>
+				<reportElement x="524" y="135" width="1" height="154" uuid="40a06146-c417-4029-b76c-987cb8ee8e0c"/>
+			</line>
+		</band>
+	</title>
+</jasperReport>
