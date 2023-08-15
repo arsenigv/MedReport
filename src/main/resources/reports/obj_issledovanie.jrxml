@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="04706566-1868-42cd-86f6-2b9ae0a0292b">
 	<property name="ireport.zoom" value="2.2000000000000006"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="743"/>
+	<property name="ireport.y" value="7"/>
 	<style name="style1">
 		<box>
 			<pen lineWidth="0.5" lineStyle="Dashed"/>
@@ -122,7 +122,7 @@
 				<textElement>
 					<font fontName="Times New Roman"/>
 				</textElement>
-				<text><![CDATA[Лечащий врач: Гвоздик Н.С.]]></text>
+				<text><![CDATA[Лечащий врач:]]></text>
 			</staticText>
 			<staticText>
 				<reportElement positionType="Float" x="345" y="609" width="100" height="20" uuid="6f184bda-a641-4f08-93a2-2ec04400b8c2"/>

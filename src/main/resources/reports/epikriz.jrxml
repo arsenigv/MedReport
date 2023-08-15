@@ -2,7 +2,7 @@
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isIgnorePagination="true" uuid="f74da855-260d-4a1b-b650-0f3461984ffb">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="18"/>
+	<property name="ireport.y" value="0"/>
 	<style name="style1"/>
 	<queryString>
 		<![CDATA[select * from examination join patient_info on patient_info.id = examination.patient_id where examination.id = 48]]>
@@ -97,7 +97,7 @@
 	<summary>
 		<band height="802">
 			<staticText>
-				<reportElement x="451" y="0" width="104" height="12" uuid="c460352b-86d4-4861-af78-abf4dea89cb8"/>
+				<reportElement x="427" y="0" width="128" height="12" uuid="c460352b-86d4-4861-af78-abf4dea89cb8"/>
 				<textElement textAlignment="Right">
 					<font fontName="Times New Roman" size="9"/>
 				</textElement>
@@ -251,7 +251,7 @@
 				<textElement>
 					<font fontName="Times New Roman" size="12"/>
 				</textElement>
-				<text><![CDATA[Н.С. Гвоздик]]></text>
+				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
 				<reportElement style="style1" positionType="Float" x="0" y="713" width="282" height="14" uuid="44d3951d-6de1-4df3-ae50-3612ec41b5ab"/>
@@ -265,7 +265,7 @@
 				<textElement>
 					<font fontName="Times New Roman" size="12"/>
 				</textElement>
-				<text><![CDATA[П.А.Суин]]></text>
+				<text><![CDATA[]]></text>
 			</staticText>
 			<staticText>
 				<reportElement positionType="Float" x="0" y="561" width="555" height="14" uuid="cc66ae81-7e6a-4b5a-8704-bb689a45d3b0"/>

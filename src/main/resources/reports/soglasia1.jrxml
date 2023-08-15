@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="cf97203a-9a72-46cd-abc4-49acc14f43e9">
 	<property name="ireport.zoom" value="2.0"/>
-	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="367"/>
+	<property name="ireport.x" value="514"/>
+	<property name="ireport.y" value="13"/>
 	<queryString>
 		<![CDATA[select * from examination join patient_info on patient_info.id = examination.patient_id]]>
 	</queryString>
@@ -227,7 +227,7 @@
 				<textElement>
 					<font fontName="Times New Roman" size="10"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Медицинским работником: врач-терапевт Гвоздик Н.С."]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Медицинским работником: "]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement positionType="Float" x="422" y="301" width="379" height="161" uuid="ae5132e8-e9c8-4e25-b277-69e476295868"/>
@@ -298,7 +298,7 @@
 				<textElement>
 					<font fontName="Times New Roman"/>
 				</textElement>
-				<text><![CDATA[Гвоздик Н.С.]]></text>
+				<text><![CDATA[]]></text>
 			</staticText>
 		</band>
 	</title>

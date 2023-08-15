@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c73618ed-37ec-480b-a471-db60cd4ae69c">
 	<property name="ireport.zoom" value="2.0"/>
-	<property name="ireport.x" value="1"/>
+	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<style name="table" fontName="Times New Roman" fontSize="12" isBold="false">
 		<pen lineWidth="0.0" lineStyle="Solid"/>
@@ -150,7 +150,7 @@
 						<printWhenExpression><![CDATA[$F{diary} != null]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Center"/>
-					<textFieldExpression><![CDATA["\nН.С. Гвоздик"]]></textFieldExpression>
+					<textFieldExpression><![CDATA["\n"]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true">
 					<reportElement style="table" positionType="Float" stretchType="RelativeToTallestObject" x="0" y="0" width="78" height="28" isPrintWhenDetailOverflows="true" uuid="0aa0c30f-ca91-4fd4-b0d0-602a13be18e1"/>

@@ -397,6 +397,7 @@ public class MainFrame extends javax.swing.JFrame {
         menuPrintItem_History = new javax.swing.JMenuItem();
         menuPrintItem_Soglasia = new javax.swing.JMenuItem();
         menuPrintItem_Uchet = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
         menu_Help = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -2944,6 +2945,14 @@ public class MainFrame extends javax.swing.JFrame {
         });
         menu_Print.add(menuPrintItem_Uchet);
 
+        jMenuItem3.setText("Выписной эпикриз (формат А5)");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        menu_Print.add(jMenuItem3);
+
         jMenuBar1.add(menu_Print);
 
         menu_Help.setText("Справка");
@@ -3732,6 +3741,14 @@ public class MainFrame extends javax.swing.JFrame {
                 + "Шаблоны отчётов находятся в папке reports\n\n"
                 + "ВНИМАНИЕ: Нельзя удалять сами файлы,а также менять их расположение и название", "Шаблоны отчётов", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        if (cb_visitDate.isEnabled() && cb_visitDate.getSelectedItem() != null) {
+            generateEpikrizA5();
+        } else {
+            JOptionPane.showMessageDialog(null, "Отсутствует запись о Курсе лечения", "Ошибка", JOptionPane.ERROR_MESSAGE);
+        }   
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
     private void searchFilter(String searchTerm) {
         DefaultListModel<Patient> filteredItems = new DefaultListModel<>();
 
@@ -4933,19 +4950,19 @@ public class MainFrame extends javax.swing.JFrame {
             e.printStackTrace();
         }
     }
-
-    private void generateFizPok() {
-        try {
-            String report = getClass().getResource("/reports/protocol_fiz_pokaz.jrxml").toString().substring(6);
+    
+    private void generateEpikrizA5() {
+        try{
+            InputStream report = getClass().getResourceAsStream("/reports/epikriz-a5.jrxml");
             JasperDesign jd = JRXmlLoader.load(report);
-            String sql = "select * from patient_info where id=" + currentPatient.getId();
+            String sql = "select * from examination join patient_info on patient_info.id = examination.patient_id where examination.id = " + currentExamination.getId();
             JRDesignQuery updateQuery = new JRDesignQuery();
             updateQuery.setText(sql);
             jd.setQuery(updateQuery);
             JasperReport jr = JasperCompileManager.compileReport(jd);
             JasperPrint jp = JasperFillManager.fillReport(jr, null, connection);
             JasperViewer.viewReport(jp, false);
-
+            
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
             e.printStackTrace();
@@ -5063,6 +5080,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
@@ -5330,4 +5348,6 @@ public class MainFrame extends javax.swing.JFrame {
         loadProcedure(currentProcedure);
         setProcFieldsEnabled(true);
     }
+
+
 }
