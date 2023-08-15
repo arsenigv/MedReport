@@ -12,4 +12,4 @@
 #### Внешний вид программы:
 ![medreport-view](https://github.com/arsenigv/MedReport/assets/121340672/df262cfe-dffe-45fa-93db-338137266faf)
 
-_Использованный стек: Java 8, Swing, JasperReports library, Maven
+_Использованный стек: Java 8, Swing, JasperReports library, Maven_
