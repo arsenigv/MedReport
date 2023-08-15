@@ -10,6 +10,6 @@
  - информированные согласия
 
 #### Внешний вид программы:
-![medreport-view](https://github.com/arsenigv/MedReport/assets/121340672/df262cfe-dffe-45fa-93db-338137266faf)
+![msg598057019-71534](https://github.com/arsenigv/MedReport/assets/121340672/9bf607a2-9bf5-43d4-9a96-f1506506a3ac)
 
 _Использованный стек: Java 8, Swing, JasperReports library, Maven_
