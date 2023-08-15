@@ -73,6 +73,17 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
               </Events>
             </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/images/Fatcow-Farm-Fresh-Information.16.png"/>
+                </Property>
+                <Property name="text" type="java.lang.String" value="&#x420;&#x435;&#x434;&#x430;&#x43a;&#x442;&#x438;&#x440;&#x43e;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x43e;&#x442;&#x447;&#x451;&#x442;&#x43e;&#x432;"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem2ActionPerformed"/>
+              </Events>
+            </MenuItem>
           </SubComponents>
         </Menu>
       </SubComponents>
@@ -559,14 +570,8 @@
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_addressLive">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_addressLiveActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_addressWork">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_addressWorkActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="label_medbook">
                   <Properties>
@@ -590,9 +595,6 @@
                 <Component class="javax.swing.JTextField" name="txt_confidant">
                 </Component>
                 <Component class="javax.swing.JTextField" name="txt_policy">
-                  <Events>
-                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_policyActionPerformed"/>
-                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="label_service">
                   <Properties>
@@ -867,9 +869,6 @@
                               <Properties>
                                 <Property name="horizontalAlignment" type="int" value="0"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_refSurnameActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="btn_refSurname">
                               <Properties>
@@ -917,9 +916,6 @@
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_historyNum">
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_historyNumActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="label_SideEffect">
                               <Properties>
@@ -927,9 +923,6 @@
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_sideEffect">
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_sideEffectActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JCheckBox" name="check_Emergency">
                               <Properties>
@@ -942,17 +935,11 @@
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_days">
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_daysActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JCheckBox" name="check_Termination">
                               <Properties>
                                 <Property name="text" type="java.lang.String" value="&#x41f;&#x440;&#x435;&#x43a;&#x440;&#x430;&#x449;&#x435;&#x43d;&#x438;&#x435; &#x43a;&#x443;&#x440;&#x441;&#x430; (&#x434;&#x43e;&#x441;&#x440;&#x43e;&#x447;&#x43d;&#x43e;&#x435;)"/>
                               </Properties>
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="check_TerminationActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="label_Result">
                               <Properties>
@@ -1007,9 +994,6 @@
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_timeAdmis">
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_timeAdmisActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="com.github.lgooddatepicker.components.DatePicker" name="date_diseaseOnset">
                             </Component>
@@ -1157,14 +1141,8 @@
                           </Layout>
                           <SubComponents>
                             <Component class="javax.swing.JTextField" name="txt_Comorbidity">
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_ComorbidityActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_ComplDiagnosisCode">
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_ComplDiagnosisCodeActionPerformed"/>
-                              </Events>
                             </Component>
                             <Container class="javax.swing.JScrollPane" name="jScrollPane8">
                               <AuxValues>
@@ -1207,9 +1185,6 @@
                               </SubComponents>
                             </Container>
                             <Component class="javax.swing.JTextField" name="txt_MainDiagnosisCode">
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_MainDiagnosisCodeActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JLabel" name="label_MainDiagnosis">
                               <Properties>
@@ -1253,9 +1228,6 @@
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_RefDiagnosisCode">
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_RefDiagnosisCodeActionPerformed"/>
-                              </Events>
                             </Component>
                             <Container class="javax.swing.JScrollPane" name="jScrollPane14">
                               <AuxValues>
@@ -1328,14 +1300,8 @@
                               </SubComponents>
                             </Container>
                             <Component class="javax.swing.JTextField" name="txt_ProvisDiagnosisCode">
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_ProvisDiagnosisCodeActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_AdmisDiagnosisCode">
-                              <Events>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_AdmisDiagnosisCodeActionPerformed"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="btn_copyMainDiag">
                               <Properties>
@@ -2833,7 +2799,6 @@
                             <Component class="javax.swing.JTextField" name="txt_proc1">
                               <Events>
                                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txt_proc1MouseClicked"/>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_proc1ActionPerformed"/>
                               </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_proc2">
@@ -2844,13 +2809,11 @@
                             <Component class="javax.swing.JTextField" name="txt_proc3">
                               <Events>
                                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txt_proc3MouseClicked"/>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_proc3ActionPerformed"/>
                               </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_proc4">
                               <Events>
                                 <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txt_proc4MouseClicked"/>
-                                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txt_proc4ActionPerformed"/>
                               </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_proc5">
@@ -4157,14 +4120,8 @@
                               </Properties>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_timeStart">
-                              <Events>
-                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txt_timeStartMouseClicked"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JTextField" name="txt_timeEnd">
-                              <Events>
-                                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="txt_timeEndMouseClicked"/>
-                              </Events>
                             </Component>
                             <Component class="javax.swing.JButton" name="btn_AddComplaintsReg">
                               <Properties>

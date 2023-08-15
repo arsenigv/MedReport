@@ -32,17 +32,6 @@ public class PopupList extends javax.swing.JDialog {
         }
         this.setTitle(title);
     }
-    
-//     public PopupList(String title, InputStream pathToFile, int type) {
-//        this.type = type;
-//        initComponents();
-//        listModel = new DefaultListModel<>();
-//        fillList(pathToFile);
-//        if (type == 0) {
-//            jList1.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-//        }
-//        this.setTitle(title);
-//    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

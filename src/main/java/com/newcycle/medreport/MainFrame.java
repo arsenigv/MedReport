@@ -35,7 +35,6 @@ public class MainFrame extends javax.swing.JFrame {
     Connection connection = null;
 
     public MainFrame() throws ClassNotFoundException {
-//        toDay();
         initComponents();
         connection = DBConnection.connectDB();
         fillPatientList();
@@ -400,6 +399,7 @@ public class MainFrame extends javax.swing.JFrame {
         menuPrintItem_Uchet = new javax.swing.JMenuItem();
         menu_Help = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("MedReport");
@@ -463,29 +463,11 @@ public class MainFrame extends javax.swing.JFrame {
 
         label_addressLive.setText("Адрес (место жительства):");
 
-        txt_addressLive.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_addressLiveActionPerformed(evt);
-            }
-        });
-
-        txt_addressWork.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_addressWorkActionPerformed(evt);
-            }
-        });
-
         label_medbook.setText("Мед. книжка (№):");
 
         label_phone.setText("Моб. телефон:");
 
         label_confidant.setText("Доверенное лицо:");
-
-        txt_policy.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_policyActionPerformed(evt);
-            }
-        });
 
         label_service.setText("Вид обслуживания:");
 
@@ -670,11 +652,6 @@ public class MainFrame extends javax.swing.JFrame {
         label_Ref.setText("Кем направлен (фамилия):");
 
         txt_refSurname.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txt_refSurname.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_refSurnameActionPerformed(evt);
-            }
-        });
 
         btn_refSurname.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Amitjakhu-Drip-Plus.16.png"))); // NOI18N
         btn_refSurname.addActionListener(new java.awt.event.ActionListener() {
@@ -700,36 +677,13 @@ public class MainFrame extends javax.swing.JFrame {
 
         label_historyNum.setText("История болезни (№):");
 
-        txt_historyNum.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_historyNumActionPerformed(evt);
-            }
-        });
-
         label_SideEffect.setText("Побочное действие лекарств:");
-
-        txt_sideEffect.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_sideEffectActionPerformed(evt);
-            }
-        });
 
         check_Emergency.setText("Срочно");
 
         label_Days.setText("Дней лечения:");
 
-        txt_days.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_daysActionPerformed(evt);
-            }
-        });
-
         check_Termination.setText("Прекращение курса (досрочное)");
-        check_Termination.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                check_TerminationActionPerformed(evt);
-            }
-        });
 
         label_Result.setText("Результат:");
 
@@ -755,12 +709,6 @@ public class MainFrame extends javax.swing.JFrame {
         label_Ref1.setText("Кем направлен (специальность):");
 
         label_Days1.setText("Время (помещение в отделение):");
-
-        txt_timeAdmis.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_timeAdmisActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout panel_GeneralLayout = new javax.swing.GroupLayout(panel_General);
         panel_General.setLayout(panel_GeneralLayout);
@@ -880,18 +828,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         tabbedPane.addTab("Общее", panel_General);
 
-        txt_Comorbidity.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_ComorbidityActionPerformed(evt);
-            }
-        });
-
-        txt_ComplDiagnosisCode.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_ComplDiagnosisCodeActionPerformed(evt);
-            }
-        });
-
         txtArea_Comorbidity.setColumns(20);
         txtArea_Comorbidity.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         txtArea_Comorbidity.setLineWrap(true);
@@ -905,12 +841,6 @@ public class MainFrame extends javax.swing.JFrame {
         txtArea_MainDiagnosis.setRows(5);
         txtArea_MainDiagnosis.setWrapStyleWord(true);
         jScrollPane7.setViewportView(txtArea_MainDiagnosis);
-
-        txt_MainDiagnosisCode.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_MainDiagnosisCodeActionPerformed(evt);
-            }
-        });
 
         label_MainDiagnosis.setText("Основной:");
 
@@ -927,12 +857,6 @@ public class MainFrame extends javax.swing.JFrame {
         label_Comorbidity.setText("Сопутствующий:");
 
         label_MainDiagnosis1.setText("Направительный:");
-
-        txt_RefDiagnosisCode.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_RefDiagnosisCodeActionPerformed(evt);
-            }
-        });
 
         txtArea_AdmisDiagnosis.setColumns(20);
         txtArea_AdmisDiagnosis.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
@@ -958,18 +882,6 @@ public class MainFrame extends javax.swing.JFrame {
         txtArea_ProvisDiagnosis.setRows(5);
         txtArea_ProvisDiagnosis.setWrapStyleWord(true);
         jScrollPane24.setViewportView(txtArea_ProvisDiagnosis);
-
-        txt_ProvisDiagnosisCode.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_ProvisDiagnosisCodeActionPerformed(evt);
-            }
-        });
-
-        txt_AdmisDiagnosisCode.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_AdmisDiagnosisCodeActionPerformed(evt);
-            }
-        });
 
         btn_copyMainDiag.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Amitjakhu-Drip-Arrow-thin-up.16.png"))); // NOI18N
         btn_copyMainDiag.setToolTipText("Дублировать значения в поля выше");
@@ -1880,11 +1792,6 @@ public class MainFrame extends javax.swing.JFrame {
                 txt_proc1MouseClicked(evt);
             }
         });
-        txt_proc1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_proc1ActionPerformed(evt);
-            }
-        });
 
         txt_proc2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1897,20 +1804,10 @@ public class MainFrame extends javax.swing.JFrame {
                 txt_proc3MouseClicked(evt);
             }
         });
-        txt_proc3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_proc3ActionPerformed(evt);
-            }
-        });
 
         txt_proc4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 txt_proc4MouseClicked(evt);
-            }
-        });
-        txt_proc4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txt_proc4ActionPerformed(evt);
             }
         });
 
@@ -2249,8 +2146,8 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         btn_DeleteExamination.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete.png"))); // NOI18N
-        btn_DeleteExamination.setToolTipText("Удалить выбранный курс лечения");
         btn_DeleteExamination.setFocusPainted(false);
+        btn_DeleteExamination.setToolTipText("Удалить выбранный курс лечения");
         btn_DeleteExamination.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btn_DeleteExaminationActionPerformed(evt);
@@ -2347,9 +2244,9 @@ public class MainFrame extends javax.swing.JFrame {
         panel_FrameToolbar.setOpaque(false);
 
         tool_Delete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete_toolbar.png"))); // NOI18N
-        tool_Delete.setToolTipText("Удалить текущего пациента");
         tool_Delete.setFocusPainted(false);
         tool_Delete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        tool_Delete.setToolTipText("Удалить текущего пациента");
         tool_Delete.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         tool_Delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2358,9 +2255,9 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         tool_Save.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/save_toolbar.png"))); // NOI18N
-        tool_Save.setToolTipText("Сохранить");
         tool_Save.setFocusPainted(false);
         tool_Save.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        tool_Save.setToolTipText("Сохранить");
         tool_Save.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         tool_Save.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2369,9 +2266,9 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         tool_New.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add_patient_toolbar.png"))); // NOI18N
-        tool_New.setToolTipText("Добавить нового пациента");
         tool_New.setFocusPainted(false);
         tool_New.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        tool_New.setToolTipText("Добавить нового пациента");
         tool_New.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         tool_New.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2380,9 +2277,9 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         tool_Refresh.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Fatcow-Farm-Fresh-Update.16.png"))); // NOI18N
-        tool_Refresh.setToolTipText("Обновить данные");
         tool_Refresh.setFocusPainted(false);
         tool_Refresh.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        tool_Refresh.setToolTipText("Обновить данные");
         tool_Refresh.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         tool_Refresh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2446,9 +2343,9 @@ public class MainFrame extends javax.swing.JFrame {
         });
 
         btnTool_RegProcedureDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete.png"))); // NOI18N
-        btnTool_RegProcedureDelete.setToolTipText("Удалить запись о посещении");
         btnTool_RegProcedureDelete.setFocusPainted(false);
         btnTool_RegProcedureDelete.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnTool_RegProcedureDelete.setToolTipText("Удалить запись о посещении");
         btnTool_RegProcedureDelete.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btnTool_RegProcedureDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -2706,18 +2603,6 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel21.setText("Время начала:");
 
         jLabel22.setText("Время ухода:");
-
-        txt_timeStart.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txt_timeStartMouseClicked(evt);
-            }
-        });
-
-        txt_timeEnd.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                txt_timeEndMouseClicked(evt);
-            }
-        });
 
         btn_AddComplaintsReg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Amitjakhu-Drip-Plus.16.png"))); // NOI18N
         btn_AddComplaintsReg.addActionListener(new java.awt.event.ActionListener() {
@@ -3072,6 +2957,15 @@ public class MainFrame extends javax.swing.JFrame {
         });
         menu_Help.add(jMenuItem1);
 
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Fatcow-Farm-Fresh-Information.16.png"))); // NOI18N
+        jMenuItem2.setText("Редактирование отчётов");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        menu_Help.add(jMenuItem2);
+
         jMenuBar1.add(menu_Help);
 
         setJMenuBar(jMenuBar1);
@@ -3104,18 +2998,6 @@ public class MainFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_tool_SaveActionPerformed
 
-    private void txt_addressWorkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_addressWorkActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_addressWorkActionPerformed
-
-    private void txt_addressLiveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_addressLiveActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_addressLiveActionPerformed
-
-    private void txt_ComplDiagnosisCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_ComplDiagnosisCodeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_ComplDiagnosisCodeActionPerformed
-
     private void rb_maleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rb_maleActionPerformed
         currentPatient.setGender("мужской");
     }//GEN-LAST:event_rb_maleActionPerformed
@@ -3125,17 +3007,13 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_rb_femaleActionPerformed
 
     private void menuPrintItem_HistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuPrintItem_HistoryActionPerformed
-        if (cb_visitDate.isEnabled()) {
+        if (cb_visitDate.isEnabled() && cb_visitDate.getSelectedItem() != null) {
             generateHistory();
         } else {
             JOptionPane.showMessageDialog(null, "Отсутствует запись о Курсе лечения", "Ошибка", JOptionPane.ERROR_MESSAGE);
         }
 
     }//GEN-LAST:event_menuPrintItem_HistoryActionPerformed
-
-    private void txt_policyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_policyActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_policyActionPerformed
 
     private void btn_Procedure5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_Procedure5ActionPerformed
         if (cb_proc.getItemCount() == 0) {
@@ -3202,18 +3080,6 @@ public class MainFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btn_AddComplaintsActionPerformed
 
-    private void check_TerminationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_check_TerminationActionPerformed
-
-    }//GEN-LAST:event_check_TerminationActionPerformed
-
-    private void txt_proc3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_proc3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_proc3ActionPerformed
-
-    private void txt_proc4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_proc4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_proc4ActionPerformed
-
     private void btn_AddExaminationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AddExaminationActionPerformed
 
         if(currentPatient.getExaminationsList() == null){
@@ -3228,10 +3094,6 @@ public class MainFrame extends javax.swing.JFrame {
         }
             
     }//GEN-LAST:event_btn_AddExaminationActionPerformed
-
-    private void txt_refSurnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_refSurnameActionPerformed
-
-    }//GEN-LAST:event_txt_refSurnameActionPerformed
 
     private void btn_refSurnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_refSurnameActionPerformed
         String str = "";
@@ -3252,18 +3114,6 @@ public class MainFrame extends javax.swing.JFrame {
             txt_refPos.setText(str);
         }
     }//GEN-LAST:event_btn_refPosActionPerformed
-
-    private void txt_MainDiagnosisCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_MainDiagnosisCodeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_MainDiagnosisCodeActionPerformed
-
-    private void txt_ComorbidityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_ComorbidityActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_ComorbidityActionPerformed
-
-    private void txt_proc1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_proc1ActionPerformed
-
-    }//GEN-LAST:event_txt_proc1ActionPerformed
 
     private void txt_proc1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_proc1MouseClicked
         chooseProcedureType(1);
@@ -3332,7 +3182,6 @@ public class MainFrame extends javax.swing.JFrame {
         if (tmp != null) {
             if (!tmp.equals(currentProcedure)) {
                 chooseCurrentProcedure(tmp);
-
             }
         }
     }//GEN-LAST:event_cb_procPopupMenuWillBecomeInvisible
@@ -3369,10 +3218,6 @@ public class MainFrame extends javax.swing.JFrame {
             Logger.getLogger(NewPatient.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_tool_NewActionPerformed
-
-    private void txt_historyNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_historyNumActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_historyNumActionPerformed
 
     private void txt_searchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_searchKeyReleased
         searchFilter(txt_search.getText());
@@ -3419,29 +3264,9 @@ public class MainFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_menuPrintItem_UchetActionPerformed
 
-    private void txt_sideEffectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_sideEffectActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_sideEffectActionPerformed
-
-    private void txt_daysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_daysActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_daysActionPerformed
-
-    private void txt_RefDiagnosisCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_RefDiagnosisCodeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_RefDiagnosisCodeActionPerformed
-
     private void btn_noSideEffectsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_noSideEffectsActionPerformed
         txt_sideEffect.setText("отрицает");
     }//GEN-LAST:event_btn_noSideEffectsActionPerformed
-
-    private void txt_ProvisDiagnosisCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_ProvisDiagnosisCodeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_ProvisDiagnosisCodeActionPerformed
-
-    private void txt_AdmisDiagnosisCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_AdmisDiagnosisCodeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_AdmisDiagnosisCodeActionPerformed
 
     private void btn_copyMainDiagActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_copyMainDiagActionPerformed
         txt_RefDiagnosisCode.setText(txt_MainDiagnosisCode.getText());
@@ -3480,7 +3305,7 @@ public class MainFrame extends javax.swing.JFrame {
         if (!txt_height.getText().equals("") && !txt_weight.getText().equals("")) {
             try {
                 Double h = Double.parseDouble(txt_height.getText()) / 100;
-                Double w = Double.parseDouble(txt_weight.getText());
+                Double w = Double.valueOf(txt_weight.getText());
                 Double r = w / (h * h);
                 String result = String.format("%.1f", r);
                 txt_imt.setText(result);
@@ -3651,8 +3476,10 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_AddSekreciaActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        JOptionPane.showMessageDialog(null, "Для изменения, добавления или удаления значений всплывающих окон необходимо отредактировать соответствующий текстовый документ."
-                + " Расположение текстовых документов: classes/txt/ \n\nВНИМАНИЕ: Нельзя удалять, менять расположение и название самих файлов!", "Всплывающие окна", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Для изменения, добавления или удаления содержимого всплывающих окон необходимо отредактировать соответствующий текстовый документ.\n"
+                + "Для доступа к файлам откройте программу как архив, например с помощью WinRAR.\n\n"
+                + "Текстовые документы находятся в папке txt\n\n"
+                + "ВНИМАНИЕ: Нельзя удалять сами файлы,а также менять их расположение и название", "Всплывающие окна", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void tool_RefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tool_RefreshActionPerformed
@@ -3673,18 +3500,6 @@ public class MainFrame extends javax.swing.JFrame {
            cb_proc.setSelectedItem(procIndex);
            loadProcedure(currentProcedure); 
         }
-//            
-//            if (currentExamination == null) {
-//                fillExaminationList();
-//            } else {
-//                
-//                if (currentProcedure == null) {
-//                    fillProcedureList();
-//                } else {
-//                    System.out.println("index " + procIndex);
-//                    
-//                }
-//        }
     }//GEN-LAST:event_tool_RefreshActionPerformed
 
     private void btn_daysActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_daysActionPerformed
@@ -3748,18 +3563,6 @@ public class MainFrame extends javax.swing.JFrame {
     private void btn_AddUZDG_BCAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AddUZDG_BCAActionPerformed
         txtArea_ExaminationResults.append("<b>УЗДГ БЦА  :</b> признаки диффузных изменений БЦА без гемодинамически значимых препятствий кровотоку. \n");
     }//GEN-LAST:event_btn_AddUZDG_BCAActionPerformed
-
-    private void txt_timeStartMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_timeStartMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_timeStartMouseClicked
-
-    private void txt_timeEndMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txt_timeEndMouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_timeEndMouseClicked
-
-    private void txt_timeAdmisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_timeAdmisActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txt_timeAdmisActionPerformed
 
     private void btn_AddComplaints1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AddComplaints1ActionPerformed
         String str = "";
@@ -3880,16 +3683,16 @@ public class MainFrame extends javax.swing.JFrame {
     private void btn_CreateDiaryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CreateDiaryActionPerformed
         StringBuilder sb = new StringBuilder();
 
-        sb.append("Жалобы: " + txt_RegComplaints.getText() + " Объективные данные:");
-        sb.append("Общее состояние: " + txt_RegStatus.getText() + " ");
-        sb.append("Температура тела: " + txt_RegTemperature.getText() + " ");
-        sb.append("Кожные покровы: " + txt_RegSkin.getText() + " ");
-        sb.append(txt_RegHeart.getText() + " ");
-        sb.append(txt_RegBreath.getText() + " ");
-        sb.append(" Язык влажный. Живот мягкий, безболезненный. Печень, селезёнка не увеличены. Симптом поколачивания отрицательный с обеих сторон."
-                + "Периферических отёков нет. Физиологические оправления в норме.");
-        sb.append("\nПосле инфузии состояние удовлетворительное. Гемодинамика стабильная. Пациент(-ка) отпущен(а) домой в удовлетворительном"
-                + "состоянии. Лечение продолжить в полном объеме.");
+        sb.append("Жалобы: " + txt_RegComplaints.getText() + " Объективные данные:")
+                .append("Общее состояние: " + txt_RegStatus.getText() + " ")
+                .append("Температура тела: " + txt_RegTemperature.getText() + " ")
+                .append("Кожные покровы: " + txt_RegSkin.getText() + " ")
+                .append(txt_RegHeart.getText() + " ")
+                .append(txt_RegPressure.getText() + " ")
+                .append(txt_RegPulse.getText() + " ")
+                .append(txt_RegBreath.getText() + " ")
+                .append(" Язык влажный. Живот мягкий, безболезненный. Печень, селезёнка не увеличены. Симптом поколачивания отрицательный с обеих сторон. Периферических отёков нет. Физиологические оправления в норме.")
+                .append("\nПосле инфузии состояние удовлетворительное. Гемодинамика стабильная. Пациент(-ка) отпущен(а) домой в удовлетворительном состоянии. Лечение продолжить в полном объеме.");
 
         txtArea_Diary.setText(sb.toString());
     }//GEN-LAST:event_btn_CreateDiaryActionPerformed
@@ -3918,7 +3721,17 @@ public class MainFrame extends javax.swing.JFrame {
                 tool_id.setText("ID: " + currentPatient.getId());
             }
         }
+        if(cb_visitDate.isEnabled()){
+            cb_visitDate.showPopup();
+            cb_visitDate.hidePopup();
+        }
     }//GEN-LAST:event_list_patientsValueChanged
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        JOptionPane.showMessageDialog(null, "Для редактирования шаблонов отчётных документов откройте программу как архив, например с помощью WinRAR.\n\n"
+                + "Шаблоны отчётов находятся в папке reports\n\n"
+                + "ВНИМАНИЕ: Нельзя удалять сами файлы,а также менять их расположение и название", "Шаблоны отчётов", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
     private void searchFilter(String searchTerm) {
         DefaultListModel<Patient> filteredItems = new DefaultListModel<>();
 
@@ -4157,7 +3970,6 @@ public class MainFrame extends javax.swing.JFrame {
         }
     }
 
-    // Добавить новый осмотр(поступление) в базу данных
     private void addExamination(LocalDate date) {
         if (cb_visitDate.isEnabled() == false) {
             cb_visitDate.setEnabled(true);
@@ -4707,7 +4519,7 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     private void fillPatientList() {
-        listModel = new DefaultListModel<Patient>();
+        listModel = new DefaultListModel<>();
         patients = getAllPatients();
         if (!patients.isEmpty()) {
             for(Patient p : patients){
@@ -4976,7 +4788,6 @@ public class MainFrame extends javax.swing.JFrame {
         txt_RegPulse.setEnabled(b);
     }
 
-    // Печать истории болезни
     private void generateHistory() {
         try {
 
@@ -5057,7 +4868,6 @@ public class MainFrame extends javax.swing.JFrame {
         }
     }
 
-    // Печать дневников
     private void generateSoglasia() {
         try {
             InputStream s = getClass().getResourceAsStream("/reports/soglasia1.jrxml");
@@ -5140,46 +4950,6 @@ public class MainFrame extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, e);
             e.printStackTrace();
         }
-    }
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                try {
-                    new MainFrame().setVisible(true);
-                } catch (ClassNotFoundException ex) {
-                    Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -5292,6 +5062,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
