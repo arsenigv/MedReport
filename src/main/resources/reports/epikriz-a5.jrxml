@@ -110,7 +110,7 @@
 				<textElement textAlignment="Center">
 					<font fontName="Times New Roman" size="8" isBold="true"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Поликлиника (г. Москва 1-й Краснокурсантский проезд)\nФГБУ \"12КДЦ\" Минобороны России\nВыписной эпикриз из медицинской карты " + $F{med_book} + " ИБ №" + $F{history} + "\n" + $F{surname} + " " + $F{name} + " " + $F{patronymic} + ", " +$F{birth}]]></textFieldExpression>
+				<textFieldExpression><![CDATA["\nВыписной эпикриз из медицинской карты " + $F{med_book} + " ИБ №" + $F{history} + "\n" + $F{surname} + " " + $F{name} + " " + $F{patronymic} + ", " +$F{birth}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="0" y="51" width="381" height="10" uuid="7e31293b-aa26-4e70-8291-98ef6216dab2"/>

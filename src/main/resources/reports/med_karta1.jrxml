@@ -143,7 +143,7 @@
 				<textElement>
 					<font isBold="true"/>
 				</textElement>
-				<text><![CDATA[ФГБУ "12 КДЦ" Минобороны России]]></text>
+				<text><![CDATA[]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement style="style1" x="0" y="54" width="255" height="28" uuid="84515ffd-8fe6-4627-bbfc-54c6c41b8f56"/>
